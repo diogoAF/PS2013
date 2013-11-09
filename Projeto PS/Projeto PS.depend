@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1383333584 source:c:\users\elemental\documents\trab\ps\trunk\projeto ps\lnegocio.c
+
+1383333584 source:c:\users\elemental\documents\trab\ps\trunk\projeto ps\pdefeito.c
+
+1383333584 source:c:\users\elemental\documents\trab\ps\trunk\projeto ps\pdesenvolvedor.c
+
+1383333584 source:c:\users\elemental\documents\trab\ps\trunk\projeto ps\pproduto.c
+
+1383333584 source:c:\users\elemental\documents\trab\ps\trunk\projeto ps\uinterface.c
+
+1383962390 source:c:\users\elemental\documents\trab\ps\trunk\projeto ps\validacaoentrada.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"ValidacaoEntrada.h"
+
+1383961649 c:\users\elemental\documents\trab\ps\trunk\projeto ps\validacaoentrada.h
+	"PacoteDeStructs.h"
+	"TabelaDeCodigos.h"
+
+1383961677 c:\users\elemental\documents\trab\ps\trunk\projeto ps\pacotedestructs.h
+
+1383961791 c:\users\elemental\documents\trab\ps\trunk\projeto ps\tabeladecodigos.h
+
+1383962190 source:c:\users\elemental\documents\trab\ps\trunk\projeto ps\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ValidacaoEntrada.h"
+
