@@ -16,30 +16,38 @@ Definições de Código de Erro
 #define NOME_DIGITOS_INSUFICIENTES -2
 #define NOME_LIMITE_DIGITOS_EXCEDIDO -3
 //Definições Código de Retorno Validação Senha
-#define SENHA_DIGITO_REPETIDO -1
-#define SENHA_DIGITOS_INSUFICIENTES -2
-#define SENHA_LIMITE_DIGITOS_EXCEDIDO -3
+#define SENHA_DIGITO_REPETIDO -4
+#define SENHA_DIGITOS_INSUFICIENTES -5
+#define SENHA_LIMITE_DIGITOS_EXCEDIDO -6
 //Definições Código de Retorno Validação Código
-#define CODIGO_CARACTER_INVALIDO -1
-#define CODIGO_DIGITOS_INSUFICIENTES -2
-#define CODIGO_LIMITE_DIGITOS_EXCEDIDO -3
+#define CODIGO_CARACTER_INVALIDO -7
+#define CODIGO_DIGITOS_INSUFICIENTES -8
+#define CODIGO_LIMITE_DIGITOS_EXCEDIDO -9
 //Definições Código de Retorno Validação Descrição
-#define DESCRICAO_DIGITOS_INSUFICIENTES -1
-#define DESCRICAO_LIMITE_DIGITOS_EXCEDIDO -2
+#define DESCRICAO_DIGITOS_INSUFICIENTES -10
+#define DESCRICAO_LIMITE_DIGITOS_EXCEDIDO -11
 //Definições Código de Retorno Validação Data
-#define DATA_DIA_INVALIDO -1
-#define DATA_MES_INVALIDO -2
-#define DATA_ANO_INVALIDO -3
+#define DATA_DIA_INVALIDO -12
+#define DATA_MES_INVALIDO -13
+#define DATA_ANO_INVALIDO -14
 //Definições Código de Retorno Validação Votação
-#define VOTO_CARACTER_INVALIDO -1
-#define VOTO_INVALIDO -2
+#define VOTO_CARACTER_INVALIDO -15
+#define VOTO_INVALIDO -16
 //Definições Código de Retorno Validação E-mail
-#define EMAIL_CARACTER_INVALIDO -1
-#define EMAIL_DIGITOS_INSUFICIENTES -2
-#define EMAIL_FORMATO_INVALIDO -3
+#define EMAIL_CARACTER_INVALIDO -17
+#define EMAIL_DIGITOS_INSUFICIENTES -18
+#define EMAIL_FORMATO_INVALIDO -19
+#define EMAIL_LIMITE_DIGITOS_EXCEDIDO -20
 //Definições Código de Retorno Validação Versão
-#define VERSAO_FORMATO_INVALIDO -1
-#define VERSAO_CODIGO_INVALIDO -2
+#define VERSAO_FORMATO_INVALIDO -21
+#define VERSAO_CODIGO_INVALIDO -22
+
+/**
+Definições de Retorno de funções de Interfaces
+*/
+//Definições de Login
+#define LOGIN_REALIZADO 2
+#define LOGIN_USUARIO_NAO_CADASTRADO 3
 
 /**
 Constantes de tamanho de vetores

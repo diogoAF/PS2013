@@ -7,9 +7,13 @@
 
 1383333584 source:c:\users\elemental\documents\trab\ps\trunk\projeto ps\pproduto.c
 
-1383333584 source:c:\users\elemental\documents\trab\ps\trunk\projeto ps\uinterface.c
+1384819454 source:c:\users\elemental\documents\trab\ps\trunk\projeto ps\uinterface.c
+	<stdio.h>
+	<stdlib.h>
+	"UInterface.h"
+	"ValidacaoEntrada.h"
 
-1383962390 source:c:\users\elemental\documents\trab\ps\trunk\projeto ps\validacaoentrada.c
+1384820734 source:c:\users\elemental\documents\trab\ps\trunk\projeto ps\validacaoentrada.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -20,12 +24,17 @@
 	"PacoteDeStructs.h"
 	"TabelaDeCodigos.h"
 
-1383961677 c:\users\elemental\documents\trab\ps\trunk\projeto ps\pacotedestructs.h
+1384824545 c:\users\elemental\documents\trab\ps\trunk\projeto ps\pacotedestructs.h
+	"TabelaDeCodigos.h"
 
-1383961791 c:\users\elemental\documents\trab\ps\trunk\projeto ps\tabeladecodigos.h
+1384824048 c:\users\elemental\documents\trab\ps\trunk\projeto ps\tabeladecodigos.h
 
-1383962190 source:c:\users\elemental\documents\trab\ps\trunk\projeto ps\main.c
+1384819884 source:c:\users\elemental\documents\trab\ps\trunk\projeto ps\main.c
 	<stdio.h>
 	<stdlib.h>
 	"ValidacaoEntrada.h"
+	"UInterface.h"
+
+1384823371 c:\users\elemental\documents\trab\ps\trunk\projeto ps\uinterface.h
+	"PacoteDeStructs.h"
 

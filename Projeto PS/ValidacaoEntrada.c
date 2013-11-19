@@ -8,6 +8,7 @@
 #define MIN_DESCRICAO 10
 #define MIN_ANO 1900
 #define ANO_ATUAL 2013
+#define MIN_EMAIL 3
 
 int ehAlfaNumerico(char);
 int verificaDigitosRepetidos(char *);
@@ -21,12 +22,12 @@ int validaNome(char * nome){
     if(strlen(nome) <= MIN_NOME){
         return(NOME_DIGITOS_INSUFICIENTES);
     }
-    if(strlen(nome) > VET_NOME){
+    else if(strlen(nome) > VET_NOME){
         return(NOME_LIMITE_DIGITOS_EXCEDIDO);
     }
     while(nome[i] != '\0'){
         if(ehAlfaNumerico(nome[i]) != TRUE){
-            return FALSE;
+            return NOME_CARACTER_INVALIDO;
         }
         i++;
     }
@@ -170,5 +171,24 @@ int validaVersao(char * versao){
        || !isdigit(versao[3]) || !isdigit(versao[4])){
         return(VERSAO_CODIGO_INVALIDO);
        }
+    return(ENTRADA_VALIDA);
+}
+
+int validaEmail(char * email){
+    if(strlen(email) < MIN_EMAIL){
+        return(EMAIL_DIGITOS_INSUFICIENTES);
+    }
+    if(strlen(email) >= VET_EMAIL){
+        return(EMAIL_LIMITE_DIGITOS_EXCEDIDO);
+    }
+    if(strstr(email,"@") == NULL){
+        return(EMAIL_FORMATO_INVALIDO);
+    }
+    if(strstr(email,".") == NULL){
+        return(EMAIL_FORMATO_INVALIDO);
+    }
+    if(strstr(email,"#") != NULL || strstr(email,"$") != NULL || strstr(email,"&") != NULL){
+        return(EMAIL_CARACTER_INVALIDO);
+    }
     return(ENTRADA_VALIDA);
 }

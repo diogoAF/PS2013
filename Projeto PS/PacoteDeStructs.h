@@ -1,6 +1,8 @@
 #ifndef PACOTEDESTRUCTS_H_INCLUDED
 #define PACOTEDESTRUCTS_H_INCLUDED
 
+#include "TabelaDeCodigos.h"
+
 /**
 Struct para armazenar a DATA
 */
@@ -8,7 +10,14 @@ typedef struct{
     int dia,mes,ano;
 }TipoData;
 
-//typedef struct
+/**
+Struct para armazenar o DESENVOLVEDOR
+*/
+typedef struct{
+    char nome[VET_NOME],
+    senha[VET_SENHA],
+    email[VET_EMAIL];
+}TipoDesenvolvedor;
 
 //typedef struct
 

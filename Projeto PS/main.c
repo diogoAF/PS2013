@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "ValidacaoEntrada.h"
+#include "UInterface.h"
 
 void testaValidaNome(void);
 void testaValidaSenha(void);
@@ -10,12 +11,7 @@ void testaValidaVoto(void);
 void testaValidaVersao(void);
 
 int main(){
-    //testaValidaNome();
-    //testaValidaSenha();
-    //testaValidaCodigo();
-    //testaValidaData();
-    //testaValidaVoto();
-    testaValidaVersao();
+    start();
     return 0;
 }
 

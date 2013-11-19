@@ -44,15 +44,18 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="PacoteDeStructs.h" />
+		<Unit filename="SLogica.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="SLogica.h" />
 		<Unit filename="SPDefeito.h" />
 		<Unit filename="SPDesenvolvedor.h" />
 		<Unit filename="SPProduto.h" />
-		<Unit filename="Structs e Defines Persistencia.h" />
 		<Unit filename="TabelaDeCodigos.h" />
 		<Unit filename="UInterface.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="UInterface.h" />
 		<Unit filename="ValidacaoEntrada.c">
 			<Option compilerVar="CC" />
 		</Unit>
