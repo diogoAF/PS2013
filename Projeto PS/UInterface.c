@@ -5,10 +5,22 @@
 #include "ValidacaoEntrada.h"
 #include "SLogica.h"
 
+/** \brief A função limpa a tela do prompt.
+ *
+ * \param void
+ * \return void
+ *
+ */
 void limpaTela(void){
     system("cls");
 }
 
+/** \brief Função responsável por iniciar as funções básicas apresentadas no menu inicial do Software.
+ *
+ * \param void
+ * \return void
+ *
+ */
 void start(void){
     int opcao, retorno;
     TipoDesenvolvedor usuario;
@@ -51,6 +63,12 @@ void start(void){
     printf("\nFinalizando...\n");
 }
 
+/** \brief A função printa no prompt o Cabeçalho do Software.
+ *
+ * \param void
+ * \return void
+ *
+ */
 void printCabecalho(void){
     printf("***************************************\n");
     printf("***************************************\n");
@@ -59,6 +77,12 @@ void printCabecalho(void){
     printf("***************************************\n");
 }
 
+/** \brief A função printa no prompt as nuancias da Tela Inicial
+ *
+ * \param void
+ * \return void
+ *
+ */
 void printTelaInicial(void){
     printf("** 1- Cadastrar                      **\n");
     printf("** 2- Login                          **\n");
@@ -67,25 +91,55 @@ void printTelaInicial(void){
     printf("Escolha: ");
 }
 
+/** \brief Função printa no prompt o inicio da Tela de Cadastro de Desenvolvedor. Também usada para o cadastro inicial.
+ *
+ * \param void
+ * \return void
+ *
+ */
 void printTelaCadastroDesenvolvedorNome(void){
     printf("**      CADASTRAR DESENVOLVEDOR      **\n");
     printf("***************************************\n");
     printf("Informe o NOME: ");
 }
 
+/** \brief Função printa no prompt a solicitação da senha.
+ *
+ * \param void
+ * \return void
+ *
+ */
 void printTelaCadastroDesenvolvedorSenha(void){
     printf("Informe a SENHA: ");
 }
 
+/** \brief Função printa no prompt a solicitação do E-mail.
+ *
+ * \param void
+ * \return void
+ *
+ */
 void printTelaCadastroDesenvolvedorEmail(void){
     printf("Informe o E-MAIL: ");
 }
 
+/** \brief Função printa no prompt a solicitação do Login.
+ *
+ * \param void
+ * \return void
+ *
+ */
 void printTelaLogin(void){
     printf("**              LOGIN                **\n");
     printf("***************************************\n");
 }
 
+/** \brief Função responsavel por efetivamente coletar e validar os dados de entrada para o cadastro de um Desenvolvedor. Ao final, os dados são repasados ao módulo de lógica de negócio.
+ *
+ * \param desenvolvedor TipoDesenvolvedor* Struct vazia que armazenará os dados do futuro desenvolvedor.
+ * \return int código de retorno.
+ *
+ */
 int cadastraDesenvolvedor(TipoDesenvolvedor * desenvolvedor){
     int retorno;
     printCabecalho();
@@ -163,6 +217,11 @@ int cadastraDesenvolvedor(TipoDesenvolvedor * desenvolvedor){
     return (ENTRADA_VALIDA);
 }
 
+/** \brief Função que coleta, valida e informa os dados necessários para a realização do Login para o Módulo de Lógica de Negócio.
+ *
+ * \return int Código de Retorno.
+ *
+ */
 int realizaLogin(){
     int retorno;
     char email[VET_EMAIL],senha[VET_SENHA];
@@ -221,8 +280,6 @@ int realizaLogin(){
     return(verificaLogin(email,senha));
 }
 
-//Verificar_Existencia_User()
-
 //Janela Usuario Tipo 1- Normal
 /*
 Cadastrar Defeito
@@ -237,8 +294,6 @@ Pesquisar Usuario
 Cancelar Conta
 Logout
 */
-
-
 
 //Janela Usuario Tipo 2- Lider Produto
 /*
@@ -284,8 +339,6 @@ Cancelar Conta Usuario
 
 Logout
 */
-
-
 
 //Janela ERRO
 /*

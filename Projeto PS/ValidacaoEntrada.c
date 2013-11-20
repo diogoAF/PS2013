@@ -14,9 +14,12 @@ int ehAlfaNumerico(char);
 int verificaDigitosRepetidos(char *);
 int ehLetra(char);
 
-/**
-Função para validar a string "nome"
-*/
+/** \brief função para validar o nome do desenvolvedor.
+ *
+ * \param nome char* o nome do desenvolvedor.
+ * \return int código de retorno.
+ *
+ */
 int validaNome(char * nome){
     int i=0;
     if(strlen(nome) <= MIN_NOME){
@@ -34,9 +37,12 @@ int validaNome(char * nome){
     return(ENTRADA_VALIDA);
 }
 
-/**
-Verifica se o caracter "variavel_char" é uma letra, número ou espaço em branco
-*/
+/** \brief Verifica se o caracter "variavel_char" é uma letra, número ou espaço em branco.
+ *
+ * \param variavel_char char o caracter que será verificado.
+ * \return int TRUE se o caracter for alfanumerico, FALSE caso contrário.
+ *
+ */
 int ehAlfaNumerico(char variavel_char){
     if((variavel_char >= 'a' && variavel_char <= 'z')||
         (variavel_char >= 'A' && variavel_char <= 'Z')){
@@ -51,9 +57,12 @@ int ehAlfaNumerico(char variavel_char){
     return FALSE;
 }
 
-/**
-Função para validar a string "senha"
-*/
+/** \brief Função para validar a string "senha". Verifica se está dentro dos padrões.
+ *
+ * \param senha char* a senha que será verificada.
+ * \return int código de retorno.
+ *
+ */
 int validaSenha(char * senha){
     if(strlen(senha) < VET_SENHA - 1){
         return(SENHA_DIGITOS_INSUFICIENTES);
@@ -67,11 +76,12 @@ int validaSenha(char * senha){
     return(ENTRADA_VALIDA);
 }
 
-/**
-Função para veririfcar a existencia de digitos duplicados
-Retorna TRUE caso exista duplicata
-Retorna FALSE caso não exista
-*/
+/** \brief Função para veririfcar a existencia de digitos duplicados na String.
+ *
+ * \param campo char* String que será analisada.
+ * \return int Retorna TRUE caso exista duplicata ou FALSE caso não exista.
+ *
+ */
 int verificaDigitosRepetidos(char * campo){
     char aux;
     int i=0,j=1;
@@ -89,9 +99,12 @@ int verificaDigitosRepetidos(char * campo){
     return FALSE;
 }
 
-/**
-Funcão para validar a string "codigo"
-*/
+/** \brief Funcão para validar se a string "codigo" está dentro dos padrões pré-definidos.
+ *
+ * \param codigo char* String a ser verificada.
+ * \return int código de retorno.
+ *
+ */
 int validaCodigo(char * codigo){
     int i=0;
     if(strlen(codigo) < VET_CODIGO - 1){
@@ -109,9 +122,12 @@ int validaCodigo(char * codigo){
     return(ENTRADA_VALIDA);
 }
 
-/**
-Verifica se o caracter "variavel_char" é uma letra
-*/
+/** \brief Verifica se o caracter "variavel_char" é uma letra.
+ *
+ * \param variavel_char char caracter a ser verificado.
+ * \return int Retorna TRUE caso o caracter seja uma letra ou FALSE caso contrário.
+ *
+ */
 int ehLetra(char variavel_char){
     if((variavel_char >= 'a' && variavel_char <= 'z')||
         (variavel_char >= 'A' && variavel_char <= 'Z')){
@@ -119,9 +135,13 @@ int ehLetra(char variavel_char){
         }
     return FALSE;
 }
-/**
-Valida a string "descricao"
-*/
+
+/** \brief Valida a string "descricao" de acordo com as metricas propostas.
+ *
+ * \param descricao char* String a ser validade.
+ * \return int código de retorno.
+ *
+ */
 int validaDescricao(char * descricao){
     if(strlen(descricao) < MIN_DESCRICAO){
         return(DESCRICAO_DIGITOS_INSUFICIENTES);
@@ -131,9 +151,13 @@ int validaDescricao(char * descricao){
     }
     return(ENTRADA_VALIDA);
 }
-/**
-Valida a struct TipoData "data"
-*/
+
+/** \brief Valida a struct TipoData "data", ou seja, se está no padrão DD-MM-AAAA.
+ *
+ * \param data TipoData Data a ser validada.
+ * \return int código de retorno.
+ *
+ */
 int validaData(TipoData data){
     if(data.dia < 1 || data.dia > 31){
         return(DATA_DIA_INVALIDO);
@@ -147,9 +171,12 @@ int validaData(TipoData data){
     return(ENTRADA_VALIDA);
 }
 
-/**
-Valida o int "voto"
-*/
+/** \brief Valida se o voto é válido.
+ *
+ * \param voto int Voto a ser validado.
+ * \return int código de retorno.
+ *
+ */
 int validaVoto(int voto){
     if(voto < 0 || voto > 100){
         return(VOTO_INVALIDO);
@@ -157,9 +184,12 @@ int validaVoto(int voto){
     return(ENTRADA_VALIDA);
 }
 
-/**
-Valida a Versão
-*/
+/** \brief Valida a Versão a versão do produto.
+ *
+ * \param versao char* Entrrada a ser validada.
+ * \return int código de retorno.
+ *
+ */
 int validaVersao(char * versao){
     if(strlen(versao) < VET_VERSAO -1 || strlen(versao) >= VET_VERSAO){
         return(VERSAO_FORMATO_INVALIDO);
@@ -174,6 +204,12 @@ int validaVersao(char * versao){
     return(ENTRADA_VALIDA);
 }
 
+/** \brief Valida se o E-mail informado é válido.
+ *
+ * \param email char* E-mail a ser validado.
+ * \return int Código de retorno.
+ *
+ */
 int validaEmail(char * email){
     if(strlen(email) < MIN_EMAIL){
         return(EMAIL_DIGITOS_INSUFICIENTES);
