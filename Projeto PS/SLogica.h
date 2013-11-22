@@ -17,10 +17,10 @@
  *
  */
 
-EXT int verificaLogin(char *, char *);
-//
-//
-//
+EXT int verificaLogin(TipoDesenvolvedor *);
+EXT int efetuaCadastroDesenvolvedor(TipoDesenvolvedor *);
+EXT int efetuarAlterarCadastro(TipoDesenvolvedor *);
+EXT int efetuarCancelarConta(TipoDesenvolvedor *);
 //
 //
 //
