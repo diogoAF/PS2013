@@ -1,10 +1,13 @@
 #ifndef SPDESENVOLVEDOR_H_INCLUDED
 #define SPDESENVOLVEDOR_H_INCLUDED
 
-//cadastrar()
-//remover()
-//editar()
-//pesquisar()
+#ifdef SPDESENVOLVEDOR_SERV
+#define EXT
+#else
+#define EXT extern
+#endif
+
+
 /** \brief Funcao de cadastro de usuário
  *
  * \param Ponteiro ao arquivo que guarda os registros dos usuários.
@@ -12,7 +15,7 @@
  * \return Codigo de Sucesso/Erro
  *
  */
-int cadastrar(FILE*, TipoDesenvolvedor*);
+EXT int cadastrar(FILE *, TipoDesenvolvedor *);
 
 
 
@@ -23,7 +26,7 @@ int cadastrar(FILE*, TipoDesenvolvedor*);
  * \return Codigo de Sucesso/Erro
  *
  */
-int deletar(FILE*, TipoDesenvolvedor*);
+EXT int deletar(FILE*, TipoDesenvolvedor*);
 
 
 
@@ -35,7 +38,7 @@ int deletar(FILE*, TipoDesenvolvedor*);
  * \return Código de Sucesso/Fracasso
  *
  */
-int existeDesenvolvedor(FILE*, char*, long int*){
+EXT int existeDesenvolvedor(FILE*, char*, long int*){
 
 
 /** \brief Função auxiliar ao cadastro responsável por preencher com " " as strings dos dados de cadastro.
@@ -45,6 +48,6 @@ int existeDesenvolvedor(FILE*, char*, long int*){
  * \return Código de Sucesso/Erro
  *
  */
-int ajustaString(char*, int);
+EXT int ajustaString(char*, int);
 
 #endif // SPDESENVOLVEDOR_H_INCLUDED

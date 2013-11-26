@@ -49,3 +49,51 @@
 	"PacoteDeStructs.h"
 	"TabelaDeCodigos.h"
 
+1383236148 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\lnegocio.c
+
+1385000959 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ValidacaoEntrada.h"
+	"UInterface.h"
+
+1385000959 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\validacaoentrada.h
+	"PacoteDeStructs.h"
+	"TabelaDeCodigos.h"
+
+1385498042 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\pacotedestructs.h
+	"TabelaDeCodigos.h"
+
+1385497372 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\tabeladecodigos.h
+
+1385497372 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\uinterface.h
+	"PacoteDeStructs.h"
+
+1383236201 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\pdefeito.c
+
+1383236215 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\pproduto.c
+
+1385244084 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\slogica.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"SLogica.h"
+
+1385244084 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\slogica.h
+	"PacoteDeStructs.h"
+	"TabelaDeCodigos.h"
+
+1385244084 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\uinterface.c
+	<stdio.h>
+	<stdlib.h>
+	"UInterface.h"
+	"ValidacaoEntrada.h"
+	"SLogica.h"
+
+1385000959 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\validacaoentrada.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"ValidacaoEntrada.h"
+

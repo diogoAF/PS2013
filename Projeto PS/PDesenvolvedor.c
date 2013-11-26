@@ -1,4 +1,9 @@
-#include <"SPDesenvolvedor.h">
+#define SPDESENVOLVEDOR_SERV
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "SPDesenvolvedor.h"
 
 #define Tamanho 10 //esse é o tamanho da string que guarda a posicao do topo da pilha de reaproveitamento de espaco
 #define HEXA 16 //guarda o numero de digitos em hexadecimal

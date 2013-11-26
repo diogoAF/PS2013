@@ -40,6 +40,7 @@ typedef struct{
     int estado, votos;
     TipoData dataAbertura, dataEncerramento;
 }TipoDefeito;
+/*
 Estou estudando um meio de utilizar a classe "list" no lugar da estrutura de ponteiros.
 */
 typedef struct listaDesenvolvedor{
