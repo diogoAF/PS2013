@@ -17,7 +17,7 @@ typedef struct{
     char nome[VET_NOME],
     senha[VET_SENHA],
     email[VET_EMAIL];
-    int categoria;
+    int categoria;//que valores?
 }TipoDesenvolvedor;
 
 /**
@@ -40,6 +40,15 @@ typedef struct{
     int estado, votos;
     TipoData dataAbertura, dataEncerramento;
 }TipoDefeito;
+Estou estudando um meio de utilizar a classe "list" no lugar da estrutura de ponteiros.
+*/
+typedef struct listaDesenvolvedor{
+    TipoDesenvolvedor *desenvolvedor;
+    struct listaDesenvolvedor *proximo;
+    struct listaDesenvolvedor *anterior;
+}ListDesenvolvedor;
+
+//typedef struct
 
 //typedef struct
 
