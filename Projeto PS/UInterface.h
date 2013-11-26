@@ -32,6 +32,12 @@ EXT int realizaAlteracaoCadastro(TipoDesenvolvedor *);
 EXT int telaCancelarConta(TipoDesenvolvedor *);
 EXT void printTelaCancelarConta(void);
 EXT int realizarCancelarConta(TipoDesenvolvedor *);
+EXT void telaPesquisarDesenvolvedor(void);
+EXT void printTelaPesquisarDesenvolvedor(void);
+EXT void realizaPesquisaDesenvolvedor(TipoDesenvolvedor *);
+EXT void printTelaPesquisarProduto(void);
+EXT void realizaPesquisaProduto(TipoProduto *);
+EXT void printTelaPesquisarDefeito(void);
 
 
 #endif // UINTERFACE_H_INCLUDED

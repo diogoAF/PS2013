@@ -25,10 +25,10 @@
 	"PacoteDeStructs.h"
 	"TabelaDeCodigos.h"
 
-1385071689 c:\users\elemental\documents\trab\ps\trunk\projeto ps\pacotedestructs.h
+1385402636 c:\users\elemental\documents\trab\ps\trunk\projeto ps\pacotedestructs.h
 	"TabelaDeCodigos.h"
 
-1385082195 c:\users\elemental\documents\trab\ps\trunk\projeto ps\tabeladecodigos.h
+1385422462 c:\users\elemental\documents\trab\ps\trunk\projeto ps\tabeladecodigos.h
 
 1384976459 source:c:\users\elemental\documents\trab\ps\trunk\projeto ps\main.c
 	<stdio.h>
@@ -36,16 +36,16 @@
 	"ValidacaoEntrada.h"
 	"UInterface.h"
 
-1385083032 c:\users\elemental\documents\trab\ps\trunk\projeto ps\uinterface.h
+1385423687 c:\users\elemental\documents\trab\ps\trunk\projeto ps\uinterface.h
 	"PacoteDeStructs.h"
 
-1385083174 source:c:\users\elemental\documents\trab\ps\trunk\projeto ps\slogica.c
+1385423545 source:c:\users\elemental\documents\trab\ps\trunk\projeto ps\slogica.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"SLogica.h"
 
-1385082121 c:\users\elemental\documents\trab\ps\trunk\projeto ps\slogica.h
+1385423192 c:\users\elemental\documents\trab\ps\trunk\projeto ps\slogica.h
 	"PacoteDeStructs.h"
 	"TabelaDeCodigos.h"
 

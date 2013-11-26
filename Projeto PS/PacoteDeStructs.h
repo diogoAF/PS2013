@@ -20,9 +20,26 @@ typedef struct{
     int categoria;
 }TipoDesenvolvedor;
 
-//typedef struct
+/**
+Struct para armazenar o PRODUTO
+*/
+typedef struct{
+    char nome[VET_NOME],
+    codigo[VET_CODIGO],
+    versao[VET_VERSAO],
+    emailLider[VET_EMAIL];
+}TipoProduto;
 
-//typedef struct
+/**
+Struct para armazenar o DEFEITO
+*/
+typedef struct{
+    char codigo[VET_CODIGO],
+    descricao[VET_DESCRICAO],
+    codigoProduto[VET_CODIGO];
+    int estado, votos;
+    TipoData dataAbertura, dataEncerramento;
+}TipoDefeito;
 
 //typedef struct
 

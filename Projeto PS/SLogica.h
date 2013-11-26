@@ -21,8 +21,9 @@ EXT int verificaLogin(TipoDesenvolvedor *);
 EXT int efetuaCadastroDesenvolvedor(TipoDesenvolvedor *);
 EXT int efetuarAlterarCadastro(TipoDesenvolvedor *);
 EXT int efetuarCancelarConta(TipoDesenvolvedor *);
-//
-//
+EXT int efetuarPesquisaDesenvolvedor(TipoDesenvolvedor *);
+EXT int efetuarPesquisaProduto(TipoProduto *);
+EXT int efetuarPesquisaDefeito(TipoDefeito *);
 //
 
 #endif // SLOGICA_H_INCLUDED

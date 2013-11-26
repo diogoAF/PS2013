@@ -163,6 +163,42 @@ void printTelaCancelarConta(void){
     printf("Tem certeza que deseja cancelar sua conta?[s/n]");
 }
 
+/** \brief Função que printa no prompt a Tela de pesquisar desenvolvedor.
+ *
+ * \param void
+ * \return void
+ *
+ */
+void printTelaPesquisarDesenvolvedor(void){
+    printf("**      PESQUISAR DESENVOLVEDOR      **\n");
+    printf("***************************************\n");
+    printf("Informe o NOME: ");
+}
+
+/** \brief Função que printa no prompt a Tela de pesquisar produto.
+ *
+ * \param void
+ * \return void
+ *
+ */
+void printTelaPesquisarProduto(void){
+    printf("**         PESQUISAR PRODUTO         **\n");
+    printf("***************************************\n");
+    printf("Informe o CODIGO: ");
+}
+
+/** \brief Função que printa no prompt a Tela de pesquisar defeito.
+ *
+ * \param void
+ * \return void
+ *
+ */
+void printTelaPesquisarDefeito(void){
+    printf("**         PESQUISAR DEFEITO         **\n");
+    printf("***************************************\n");
+    printf("Informe o CODIGO: ");
+}
+
 /** \brief Função responsavel por efetivamente coletar e validar os dados de entrada para o cadastro de um Desenvolvedor.
  *
  * \return void
@@ -476,6 +512,201 @@ int realizarCancelarConta(TipoDesenvolvedor * usuario){
     }
 }
 
+/** \brief função que estrutura a tela de pesquisa de desenvolvedor.
+ *
+ * \param void
+ * \return void
+ *
+ */
+void telaPesquisarDesenvolvedor(void){
+    int retorno;
+    TipoDesenvolvedor desenvolvedor;
+    printCabecalho();
+    printTelaPesquisarDesenvolvedor();
+    scanf("%[^\n]s",&desenvolvedor.nome);
+    getchar();
+    retorno = validaNome(desenvolvedor.nome);
+    while(retorno != ENTRADA_VALIDA){
+        if(retorno == NOME_CARACTER_INVALIDO){
+            printf("ERRO!\nNOME comporta apenas letras. Informe novamente: ");
+            scanf("%[^\n]s",&desenvolvedor.nome);
+            getchar();
+        }
+        else if(retorno == NOME_DIGITOS_INSUFICIENTES){
+            printf("ERRO!\nNOME pequeno demais. Informe novamente: ");
+            scanf("%[^\n]s",&desenvolvedor.nome);
+            getchar();
+        }
+        else if(retorno NOME_LIMITE_DIGITOS_EXCEDIDO){
+            printf("ERRO!\nNOME possui no maximo 15 digitos. Informe novamente: ");
+            scanf("%[^\n]s",&desenvolvedor.nome);
+            getchar();
+        }
+        retorno = validaNome(desenvolvedor.nome);
+    }
+    realizaPesquisaDesenvolvedor(&desenvolvedor);
+}
+
+/** \brief função responsavel por mandar os dados coletados para o módulo de lógica de negócio para o correto processamento, quando recebe o resultado, passa para o usuario.
+ *
+ * \param desenvolvedor TipoDesenvolvedor* Struct onde o NOME do desenvolvedor que deve ser pesquisado está armazenado.
+ * \return void
+ *
+ */
+void realizaPesquisaDesenvolvedor(TipoDesenvolvedor * desenvolvedor){
+    if(efetuarPesquisaDesenvolvedor(desenvolvedor) == PESQUISA_DESENVOLVEDOR_ENCONTRADO){
+        printf("\nDesenvolvedor Encontrado!");
+        printf("\nNOME: %s\nEMAIL: %s\nCategoria: ",desenvolvedor->nome,desenvolvedor->email);
+        if(desenvolvedor->categoria == DESENVOLVEDOR_COMUM){
+            printf("Desenvolvedor\n");
+        }
+        if(desenvolvedor->categoria == DESENVOLVEDOR_LIDER_PRODUTO){
+            printf("Lider de Produto\n");
+        }
+        if(desenvolvedor->categoria == DESENVOLVEDOR_LIDER_PROJETO){
+            printf("Lider de Projeto\n");
+        }
+        system("pause");
+    }
+    else{
+        printf("\nDESENVOLVEDOR NAO ENCONTRADO!\n");
+        system("pause");
+    }
+}
+
+/** \brief função que estrutura a tela de pesquisa de produto.
+ *
+ * \param void
+ * \return void
+ *
+ */
+void telaPesquisarProduto(void){
+    TipoProduto produto;
+    int retorno;
+    printCabecalho();
+    printTelaPesquisarProduto();
+    scanf("%[^\n]s",&produto.codigo);
+    getchar();
+
+    retorno = validaCodigo(produto.codigo);
+    while(retorno != ENTRADA_VALIDA){
+        if(retorno == CODIGO_CARACTER_INVALIDO){
+            printf("ERRO!\nCODIGO comporta apenas letras. Informe novamente: ");
+            scanf("%[^\n]s",&produto.codigo);
+            getchar();
+        }
+        else if(retorno == CODIGO_DIGITOS_INSUFICIENTES){
+            printf("ERRO!\nCODIGO pequeno demais. Informe novamente: ");
+            scanf("%[^\n]s",&produto.codigo);
+            getchar();
+        }
+        else if(retorno CODIGO_LIMITE_DIGITOS_EXCEDIDO){
+            printf("ERRO!\nCODIGO possui no maximo 4 digitos. Informe novamente: ");
+            scanf("%[^\n]s",&produto.codigo);
+            getchar();
+        }
+        retorno = validaCodigo(produto.codigo);
+    }
+
+    realizaPesquisaProduto(&produto);
+}
+
+/** \brief função responsavel por mandar os dados coletados para o módulo de lógica de negócio para o correto processamento, quando recebe o resultado, passa para o usuario.
+ *
+ * \param produto TipoProduto* Struct onde o CODIGO do PRODUTO que deve ser pesquisado está armazenado.
+ * \return void
+ *
+ */
+void realizaPesquisaProduto(TipoProduto * produto){
+    if(efetuarPesquisaProduto(produto) == PESQUISA_PRODUTO_ENCONTRADO){
+        printf("\nProduto Encontrado!");
+        printf("\nNOME: %s\nCODIGO: %s\nVersão: %s\nE-MAIL DO LIDER: %s\n",produto->nome,produto->codigo,produto->versao,produto->emailLider);
+        system("pause");
+    }
+    else{
+        printf("\nPRODUTO NAO ENCONTRADO!\n");
+        system("pause");
+    }
+}
+
+/** \brief função que estrutura a tela de pesquisa de defeito.
+ *
+ * \param void
+ * \return void
+ *
+ */
+void telaPesquisarDefeito(void){
+    TipoDefeito defeito;
+    int retorno;
+    printCabecalho();
+    printTelaPesquisarDefeito();
+    scanf("%[^\n]s",&defeito.codigo);
+    getchar();
+
+    retorno = validaCodigo(defeito.codigo);
+    while(retorno != ENTRADA_VALIDA){
+        if(retorno == CODIGO_CARACTER_INVALIDO){
+            printf("ERRO!\nCODIGO comporta apenas letras. Informe novamente: ");
+            scanf("%[^\n]s",&defeito.codigo);
+            getchar();
+        }
+        else if(retorno == CODIGO_DIGITOS_INSUFICIENTES){
+            printf("ERRO!\nCODIGO pequeno demais. Informe novamente: ");
+            scanf("%[^\n]s",&defeito.codigo);
+            getchar();
+        }
+        else if(retorno CODIGO_LIMITE_DIGITOS_EXCEDIDO){
+            printf("ERRO!\nCODIGO possui no maximo 4 digitos. Informe novamente: ");
+            scanf("%[^\n]s",&defeito.codigo);
+            getchar();
+        }
+        retorno = validaCodigo(defeito.codigo);
+    }
+
+    realizaPesquisaDefeito(&defeito);
+}
+
+/** \brief função responsavel por mandar os dados coletados para o módulo de lógica de negócio para o correto processamento, quando recebe o resultado, passa para o usuario.
+ *
+ * \param defeito TipoDefeito* Struct onde o CODIGO do DEFEITO que deve ser pesquisado está armazenado.
+ * \return void
+ *
+ */
+void realizaPesquisaDefeito(TipoDefeito * defeito){
+    if(efetuarPesquisaDefeito(defeito) == PESQUISA_DEFEITO_ENCONTRADO){
+        printf("\nDefeito Encontrado!");
+        printf("\nDESCRICAO: %s\nCODIGO: %s\nCodigo do Produto: %s\nVotos: %d\nData Abertura: %d-%d-%d\nEstado: ",
+               defeito->descricao,defeito->codigo,defeito->codigoProduto,defeito->votos,defeito->dataAbertura.dia,defeito->dataAbertura.mes,defeito->dataAbertura.ano);
+        switch (defeito->estado){
+            case ESTADO_CONFIRMADO:{
+                printf("Confirmado\n");
+                break;
+            }
+            case ESTADO_EM_REPARO:{
+                printf("Em Reparo\n");
+                break;
+            }
+            case ESTADO_ENCERRADO: {
+                printf("Encerrado\n");
+                printf("Data Encerramento: %d-%d-%d\n",defeito->dataEncerramento.dia,defeito->dataEncerramento.mes,defeito->dataEncerramento.ano);
+                break;
+            }
+            case ESTADO_NOVO: {
+                printf("Novo\n");
+                break;
+            }
+            default:{
+                printf("Reparado\n");
+            }
+        }
+        system("pause");
+    }
+    else{
+        printf("\nDEFEITO NAO ENCONTRADO!\n");
+        system("pause");
+    }
+}
+
 /** \brief Função responsavel pelo menu inicial apresentados as funcionalidades desponiveis para o Desenvolvedor Comum.
  *
  * \param usuario TipoDesenvolvedor* Struct contendo as informações do usuário do sistema.
@@ -510,15 +741,15 @@ void telaInicialDesenvolvedorComum(TipoDesenvolvedor * usuario){
                 break;
             }
             case 4: {
-                //telaPesquisarDefeito();
+                telaPesquisarDefeito();
                 break;
             }
             case 5: {
-                //telaPesquisarProduto();
+                telaPesquisarProduto();
                 break;
             }
             case 6: {
-                //telaPesquisarDesenvolvedor();
+                telaPesquisarDesenvolvedor();
                 break;
             }
             case 7: {
@@ -540,6 +771,8 @@ void telaInicialDesenvolvedorComum(TipoDesenvolvedor * usuario){
     }while(opcao < 9);
 }
 
+
+
 //Janela Usuario Tipo 2- Lider Produto
 /*
 Alocar Desenvolvedor no Defeito
@@ -547,7 +780,6 @@ Remover Desenvolvedor do Defeito
 
 Cadastrar Defeito
 Votar Defeito
-Voluntariar ao Defeito <---!!!!
 Pesquisar Defeitos
 
 Pesquisar Produtos
@@ -567,12 +799,8 @@ Remover Lider Produto
 Criar Produto
 Remover Produto
 
-Alocar Desenvolvedor no Defeito
-Remover Desenvolvedor do Defeito
-
 Cadastrar Defeito
 Votar Defeito
-Voluntariar ao Defeito <---!!!!
 Pesquisar Defeitos
 
 Pesquisar Produtos
@@ -584,20 +812,3 @@ Cancelar Conta Usuario
 
 Logout
 */
-
-//Janela ERRO
-/*
-_Provocados pelo usuario_
-Formato
-Autenticacao
-Opcao
-
-_Provocados pelo Sistema_
-Arquivo Inexistente
-Falha no acesso de memoria
-*/
-
-
-
-
-
