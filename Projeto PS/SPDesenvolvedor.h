@@ -17,7 +17,7 @@
  * \return Codigo de Sucesso/Erro
  *
  */
-EXT int cadastrar(FILE *, TipoDesenvolvedor *);
+EXT int cadastrar(FILE *,TipoDesenvolvedor *);
 
 
 

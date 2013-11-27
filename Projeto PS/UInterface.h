@@ -38,6 +38,6 @@ EXT void realizaPesquisaDesenvolvedor(TipoDesenvolvedor *);
 EXT void printTelaPesquisarProduto(void);
 EXT void realizaPesquisaProduto(TipoProduto *);
 EXT void printTelaPesquisarDefeito(void);
-
+EXT void realizaPesquisaDefeito(TipoDefeito*);
 
 #endif // UINTERFACE_H_INCLUDED
