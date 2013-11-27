@@ -12,7 +12,7 @@
 //+1: creio que esse seja o caractere de retorno de carro
 //os -1: cada macro foi feita pensando na extensao do vetor, que carrega um caractere NULL.
 //esse caractere deve ser ignorado ao contar quantos elementos um vetor tem efetivamente
- int cadastrar(FILE *arquivo, TipoDesenvolvedor *desenvolvedor){
+ int cadastrarUsuario(FILE *arquivo, TipoDesenvolvedor *desenvolvedor){
     /*
         Se(Nao existe espaco vago){
             cadastraNoFinalDoArquivo();
@@ -68,7 +68,7 @@
     }
  }
 
- int deletar(FILE * arquivo, TipoDesenvolvedor * registro){
+ int deletarUsuario(FILE * arquivo, TipoDesenvolvedor * registro){
     /*
         pula o indicador de espaço vazio;
         Busca o registro no arquivo;
@@ -115,7 +115,7 @@
 
  }
 
-int existeDesenvolvedor(FILE *arquivo, char *chavePrimaria, long int *posicao){
+int existeUsuario(FILE *arquivo, char *chavePrimaria, long int *posicao){
     ajustaString(chavePrimaria, VET_EMAIL);
     char buffer[VET_EMAIL];
     char lixo[TAM_TOTAL - VET_EMAIL + 1];

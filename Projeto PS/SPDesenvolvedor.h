@@ -17,7 +17,7 @@
  * \return Codigo de Sucesso/Erro
  *
  */
-EXT int cadastrar(FILE *,TipoDesenvolvedor *);
+EXT int cadastrarUsuario(FILE *,TipoDesenvolvedor *);
 
 
 
@@ -28,7 +28,7 @@ EXT int cadastrar(FILE *,TipoDesenvolvedor *);
  * \return Codigo de Sucesso/Erro
  *
  */
-EXT int deletar(FILE*, TipoDesenvolvedor*);
+EXT int deletarUsuario(FILE*, TipoDesenvolvedor*);
 
 
 
@@ -40,7 +40,7 @@ EXT int deletar(FILE*, TipoDesenvolvedor*);
  * \return Código de Sucesso/Fracasso
  *
  */
-EXT int existeDesenvolvedor(FILE*, char*, long int*);
+EXT int existeUsuario(FILE*, char*, long int*);
 
 
 /** \brief Função auxiliar ao cadastro responsável por preencher com " " as strings dos dados de cadastro.
