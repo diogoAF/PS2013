@@ -97,3 +97,25 @@
 	<ctype.h>
 	"ValidacaoEntrada.h"
 
+1385509186 source:c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\lnegocio.c
+
+1385509186 source:c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ValidacaoEntrada.h"
+	"UInterface.h"
+
+1385509186 c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\validacaoentrada.h
+	"PacoteDeStructs.h"
+	"TabelaDeCodigos.h"
+
+1385509186 c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\pacotedestructs.h
+	"TabelaDeCodigos.h"
+
+1385509186 c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\tabeladecodigos.h
+
+1385509186 c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\uinterface.h
+	"PacoteDeStructs.h"
+
+1385509186 source:c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\pdefeito.c
+

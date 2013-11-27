@@ -7,6 +7,8 @@
 #define EXT extern
 #endif
 
+#include "PacoteDeStructs.h"
+
 
 /** \brief Funcao de cadastro de usuário
  *
@@ -38,7 +40,7 @@ EXT int deletar(FILE*, TipoDesenvolvedor*);
  * \return Código de Sucesso/Fracasso
  *
  */
-EXT int existeDesenvolvedor(FILE*, char*, long int*){
+EXT int existeDesenvolvedor(FILE*, char*, long int*);
 
 
 /** \brief Função auxiliar ao cadastro responsável por preencher com " " as strings dos dados de cadastro.
