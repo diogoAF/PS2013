@@ -52,4 +52,64 @@ EXT int existeUsuario(FILE*, char*, long int*);
  */
 EXT int ajustaString(char*, int);
 
+
+
+/** \brief Edita todos os campos do registro de um usuario
+ *
+ * \param Ponteiro ao arquivo que armazena as informações dos usuários.
+ * \param Estrutura de dados que armazena as informações do usuário em memória.
+ * \param Long int com a posição do registro no arquivo
+ * \return Código de Sucesso/Erro
+ *
+ */
+EXT int editarUsuario(FILE*, TipoDesenvolvedor*, long int);
+
+
+
+/** \brief Edita campo email do registro de um usuario
+ *
+ * \param Ponteiro ao arquivo que armazena as informações dos usuários.
+ * \param String que armazena o novo email
+ * \param Long int com a posição do registro no arquivo
+ * \return Código de Sucesso/Erro
+ *
+ */
+EXT int editarUsuarioEmail(FILE*, char *, long int);
+
+
+
+/** \brief Edita campo nome do registro de um usuario
+ *
+ * \param Ponteiro ao arquivo que armazena as informações dos usuários.
+ * \param String que armazena o novo nome
+ * \param Long int com a posição do registro no arquivo
+ * \return Código de Sucesso/Erro
+ *
+ */
+ EXT int editarUsuarioNome(FILE*, char*, long int);
+
+
+
+/** \brief Edita campo senha do registro de um usuario
+ *
+ * \param Ponteiro ao arquivo que armazena as informações dos usuários.
+ * \param String que armazena o nova senha
+ * \param Long int com a posição do registro no arquivo
+ * \return Código de Sucesso/Erro
+ *
+ */
+ EXT int editarUsuarioSenha(FILE*, char*, long int);
+
+
+
+/** \brief Edita campo categoria do registro de um usuario
+ *
+ * \param Ponteiro ao arquivo que armazena as informações dos usuários.
+ * \param int que armazena o nova categoria
+ * \param Long int com a posição do registro no arquivo
+ * \return Código de Sucesso/Erro
+ *
+ */
+ EXT int editarUsuarioCategoria(FILE*, int, long int);
+
 #endif // SPDESENVOLVEDOR_H_INCLUDED

@@ -133,3 +133,39 @@ int existeUsuario(FILE *arquivo, char *chavePrimaria, long int *posicao){
     *posicao = NULL;
     return FALSE;
 }
+
+int editarUsuario(FILE *arquivo, TipoDesenvolvedor *usuario, long int posicao){
+    fseek(arquivo, posicao, SEEK_SET);
+    printf("email: -%s-\n", usuario->email);
+    printf("nome: -%s-\n", usuario->nome);
+    printf("senha: -%s-\n", usuario->senha);
+    printf("categoria: -%d-\n", usuario->categoria);
+    fwrite(usuario->email, sizeof(char), VET_EMAIL-1, arquivo);
+    fprintf(arquivo, " ");
+    fwrite(usuario->nome, sizeof(char), VET_NOME-1, arquivo);
+    fprintf(arquivo, " ");
+    fwrite(usuario->senha, sizeof(char), VET_SENHA-1, arquivo);
+    fprintf(arquivo, " ");
+    fprintf(arquivo, "%d\n", usuario->categoria);
+}
+
+int editarUsuarioEmail(FILE *arquivo, char *email, long int posicao){
+    fseek(arquivo, posicao, SEEK_SET);
+    fwrite(email, sizeof(char), VET_EMAIL-1, arquivo);
+}
+
+int editarUsuarioNome(FILE *arquivo, char *nome, long int posicao){
+    fseek(arquivo, posicao + VET_EMAIL, SEEK_SET);
+    fwrite(nome, sizeof(char), VET_NOME-1, arquivo);
+}
+
+int editarUsuarioSenha(FILE *arquivo, char *senha, long int posicao){
+    fseek(arquivo, posicao + VET_EMAIL + VET_NOME, SEEK_SET);
+    fwrite(senha, sizeof(char), VET_SENHA-1, arquivo);
+}
+
+int editarUsuarioCategoria(FILE *arquivo, int categoria, long int posicao){
+    fseek(arquivo, posicao + VET_EMAIL + VET_NOME + VET_SENHA, SEEK_SET);
+    fprintf(arquivo, "%d", categoria);
+}
+
