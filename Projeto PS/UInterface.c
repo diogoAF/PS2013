@@ -146,6 +146,26 @@ void printTelaCadastrarDefeitoDataAbertura(void){
     printf("Informe o Dia, Mes e Ano (Data de Abertura): ");
 }
 
+/** \brief Função printa no prompt a solicitação do NOME.
+ *
+ * \param void
+ * \return void
+ *
+ */
+void printTelaCadastrarProdutoNome(void){
+    printf("Informe o NOME: ");
+}
+
+/** \brief Função printa no prompt a solicitação da versão. Complemento da Tela de Cadastrar Produto.
+ *
+ * \param void
+ * \return void
+ *
+ */
+void printTelaCadastrarProdutoVersao(void){
+    printf("Informe a VERSAO: ");
+}
+
 /** \brief Função printa no prompt a solicitação do Login.
  *
  * \param void
@@ -323,6 +343,18 @@ void printTelaCadastrarDefeito(void){
     printf("Informe o CODIGO: ");
 }
 
+/** \brief Função que printa no prompt a Tela de cadastrar produto.
+ *
+ * \param void
+ * \return void
+ *
+ */
+void printTelaCadastrarProduto(void){
+    printf("**        CADASTRAR PRODUTO          **\n");
+    printf("***************************************\n");
+    printf("Informe o CODIGO: ");
+}
+
 /** \brief Função que printa no prompt a Tela de alocar desenvolvedor p/ defeito.
  *
  * \param void
@@ -333,6 +365,42 @@ void printTelaAlocarDesenvolvedorDefeito(void){
     printf("**     ALOCAR DESENV. P/ DEFEITO     **\n");
     printf("***************************************\n");
     printf("Informe o CODIGO do Defeito: ");
+}
+
+/** \brief Função que printa no prompt a Tela de alocar lider produto.
+ *
+ * \param void
+ * \return void
+ *
+ */
+void printTelaAlocarLiderProduto(void){
+    printf("**      ALOCAR LIDER DE PRODUTO      **\n");
+    printf("***************************************\n");
+    printf("Informe o CODIGO do Produto: ");
+}
+
+/** \brief Função que printa no prompt a Tela de remover lider de um produto.
+ *
+ * \param void
+ * \return void
+ *
+ */
+void printTelaRemoverLiderProduto(void){
+    printf("**      REMOVER LIDER DE PRODUTO      **\n");
+    printf("***************************************\n");
+    printf("Informe o CODIGO do Produto: ");
+}
+
+/** \brief Função que printa no prompt a Tela de remover um produto.
+ *
+ * \param void
+ * \return void
+ *
+ */
+void printTelaRemoverProduto(void){
+    printf("**          REMOVER PRODUTO          **\n");
+    printf("***************************************\n");
+    printf("Informe o CODIGO do Produto: ");
 }
 
 /** \brief Função que printa no prompt a Tela de remover desenvolvedor do defeito.
@@ -1413,6 +1481,206 @@ int realizarCancelarContaLiderProjeto(TipoDesenvolvedor * usuario){
         system("pause");
         return(DESENVOLVEDOR_CONTA_NAO_PODE_SER_CANCELADA);
     }
+}
+
+/** \brief Função que coleta e valida os dados necessarios para o alocar o lider de produto.
+ *
+ * \param void
+ * \return void
+ *
+ */
+void telaAlocarLiderProduto(void){
+    char email[VET_EMAIL], codigo[VET_CODIGO];
+    int retorno;
+
+    printCabecalho();
+    printTelaAlocarLiderProduto();
+    scanf("%[^\n]s",&codigo);
+    getchar();
+    retorno = validaCodigo(codigo);
+    while(retorno != ENTRADA_VALIDA){
+        if(retorno == CODIGO_CARACTER_INVALIDO){
+            printf("ERRO!\nCODIGO comporta apenas letras. Informe novamente: ");
+            scanf("%[^\n]s",&codigo);
+            getchar();
+        }
+        else if(retorno == CODIGO_DIGITOS_INSUFICIENTES){
+            printf("ERRO!\nCODIGO pequeno demais. Informe novamente: ");
+            scanf("%[^\n]s",&codigo);
+            getchar();
+        }
+        else if(retorno CODIGO_LIMITE_DIGITOS_EXCEDIDO){
+            printf("ERRO!\nCODIGO possui no maximo 4 digitos. Informe novamente: ");
+            scanf("%[^\n]s",&codigo);
+            getchar();
+        }
+        retorno = validaCodigo(codigo);
+    }
+
+    printTelaCadastroDesenvolvedorEmail();
+    scanf("%[^\n]s",&email);
+    getchar();
+    retorno = validaEmail(email);
+    while(retorno != ENTRADA_VALIDA){
+        if(retorno == EMAIL_CARACTER_INVALIDO){
+            printf("ERRO!\nEMAIL informado contem digito invalido. Informe novamente: ");
+            scanf("%[^\n]s",&email);
+            getchar();
+        }
+        if(retorno == EMAIL_FORMATO_INVALIDO){
+            printf("ERRO!\nEMAIL formato invalido. Informe novamente: ");
+            scanf("%[^\n]s",&email);
+            getchar();
+        }
+        else if(retorno == EMAIL_DIGITOS_INSUFICIENTES){
+            printf("ERRO!\nEMAIL nao pode ter menos que 3 digitos. Informe novamente: ");
+            scanf("%[^\n]s",&email);
+            getchar();
+        }
+        else if(retorno EMAIL_LIMITE_DIGITOS_EXCEDIDO){
+            printf("ERRO!\nEMAIL nao pode ter mais do que 20 digitos. Informe novamente: ");
+            scanf("%[^\n]s",&email);
+            getchar();
+        }
+        retorno = validaEmail(email);
+    }
+    realizaAlocarLiderProduto(codigo, email);
+}
+
+/** \brief Função responsavel por enviar os dados coletados na "printTelaAlocarLiderProduto" para o módulo de logica de negocio e mostrar para o usuario o resultado do processamento.
+ *
+ * \param codigo char* Codigo do produto ao qual o desenvolvedor será alocado como lider.
+ * \param email char* E-mail do desenvolvedor que será alocao como lider do produto.
+
+ * \return void
+ *
+ */
+void realizaAlocarLiderProduto(char * codigo, char * email){
+    int retorno;
+    retorno = efetuarAlocarLiderProduto(codigo, email);
+    if(retorno == PRODUTO_LIDER_ALOCADO){
+        printf("\nLider alocado com Sucesso!\n");
+    }else if(retorno == PRODUTO_DESENVOLVEDOR_NAO_PODE_SER_LIDER){
+        printf("\nERRO! Desenvolvedor nao pode ser alocado como lider de produto!\n");
+    }else if(retorno == PESQUISA_PRODUTO_NAO_ENCONTRADO){
+        printf("\nERRO! Produto informado nao existe!\n");
+    }else if(retorno == PESQUISA_DESENVOLVEDOR_NAO_ENCONTRADO){
+        printf("\nERRO! Desenvolvedor informado nao existe!\n");
+    }else if(retorno == PRODUTO_JA_TEM_LIDER){
+        printf("\nERRO! O Produto informado ja possui lider alocado!\n");
+    }
+    system("pause");
+}
+
+/** \brief Função que coleta e valida os dados necessarios para o remover o lider de um produto.
+ *
+ * \param void
+ * \return void
+ *
+ */
+void telaRemoverLiderProduto(void){
+    char codigo[VET_CODIGO];
+    int retorno;
+
+    printCabecalho();
+    printTelaRemoverLiderProduto();
+    scanf("%[^\n]s",&codigo);
+    getchar();
+    retorno = validaCodigo(codigo);
+    while(retorno != ENTRADA_VALIDA){
+        if(retorno == CODIGO_CARACTER_INVALIDO){
+            printf("ERRO!\nCODIGO comporta apenas letras. Informe novamente: ");
+            scanf("%[^\n]s",&codigo);
+            getchar();
+        }
+        else if(retorno == CODIGO_DIGITOS_INSUFICIENTES){
+            printf("ERRO!\nCODIGO pequeno demais. Informe novamente: ");
+            scanf("%[^\n]s",&codigo);
+            getchar();
+        }
+        else if(retorno CODIGO_LIMITE_DIGITOS_EXCEDIDO){
+            printf("ERRO!\nCODIGO possui no maximo 4 digitos. Informe novamente: ");
+            scanf("%[^\n]s",&codigo);
+            getchar();
+        }
+        retorno = validaCodigo(codigo);
+    }
+    realizaRemoverLiderProduto(codigo);
+}
+
+/** \brief Função responsavel por enviar os dados coletados na "printTelaRemoverLiderProduto" para o módulo de logica de negocio e mostrar para o usuario o resultado do processamento.
+ *
+ * \param codigo char* Codigo do produto ao qual o desenvolvedor será removido como lider.
+ * \return void
+ *
+ */
+void realizaRemoverLiderProduto(char * codigo){
+    int retorno;
+    retorno = efetuarRemoverLiderProduto(codigo);
+    if(retorno == PRODUTO_LIDER_REMOVIDO){
+        printf("\nLider removido com Sucesso!\n");
+    }else if(retorno == PESQUISA_PRODUTO_NAO_ENCONTRADO){
+        printf("\nERRO! Produto informado nao existe!\n");
+    }else if(retorno == PRODUTO_SEM_LIDER){
+        printf("\nERRO! Produto informado nao possui lider!\n");
+    }
+    system("pause");
+}
+
+/** \brief Função que coleta e valida os dados necessarios para o remover um produto.
+ *
+ * \param void
+ * \return void
+ *
+ */
+void telaRemoverProduto(void){
+    char codigo[VET_CODIGO];
+    int retorno;
+
+    printCabecalho();
+    printTelaRemoverProduto();
+    scanf("%[^\n]s",&codigo);
+    getchar();
+    retorno = validaCodigo(codigo);
+    while(retorno != ENTRADA_VALIDA){
+        if(retorno == CODIGO_CARACTER_INVALIDO){
+            printf("ERRO!\nCODIGO comporta apenas letras. Informe novamente: ");
+            scanf("%[^\n]s",&codigo);
+            getchar();
+        }
+        else if(retorno == CODIGO_DIGITOS_INSUFICIENTES){
+            printf("ERRO!\nCODIGO pequeno demais. Informe novamente: ");
+            scanf("%[^\n]s",&codigo);
+            getchar();
+        }
+        else if(retorno CODIGO_LIMITE_DIGITOS_EXCEDIDO){
+            printf("ERRO!\nCODIGO possui no maximo 4 digitos. Informe novamente: ");
+            scanf("%[^\n]s",&codigo);
+            getchar();
+        }
+        retorno = validaCodigo(codigo);
+    }
+    realizaRemoverProduto(codigo);
+}
+
+/** \brief Função responsavel por enviar os dados coletados na "realizaRemoverProduto" para o módulo de logica de negocio e mostrar para o usuario o resultado do processamento.
+ *
+ * \param codigo char* Codigo do produto que será excluido.
+ * \return void
+ *
+ */
+void realizaRemoverProduto(char * codigo){
+    int retorno;
+    retorno = efetuarRemoverProduto(codigo);
+    if(retorno == PRODUTO_REMOVIDO){
+        printf("\nProduto removido com Sucesso!\n");
+    }else if(retorno == PESQUISA_PRODUTO_NAO_ENCONTRADO){
+        printf("\nERRO! Produto informado nao existe!\n");
+    }else if(retorno == PRODUTO_NAO_PODE_SER_REMOVIDO){
+        printf("\nERRO! Produto informado nao pode ser removido!\n");
+    }
+    system("pause");
+}
 
 /** \brief função que envia os dados de login para o módulo de lógica de negócio.
  *
@@ -1439,6 +1707,126 @@ void realizaLogin(TipoDesenvolvedor * usuario){
         printf("\nERRO! LOGIN FALHOU!\n");
         system("pause");
     }
+}
+
+/** \brief Função que coleta e valida os dados necessarios para o cadastro do defeito.
+ *
+ * \param void
+ * \return void
+ *
+ */
+void telaCadastrarProduto(void){
+    TipoProduto produto;
+    int retorno;
+
+    printCabecalho();
+    printTelaCadastrarProduto();
+    scanf("%[^\n]s",&produto.codigo);
+    getchar();
+    retorno = validaCodigo(produto.codigo);
+    while(retorno != ENTRADA_VALIDA){
+        if(retorno == CODIGO_CARACTER_INVALIDO){
+            printf("ERRO!\nCODIGO comporta apenas letras. Informe novamente: ");
+            scanf("%[^\n]s",&produto.codigo);
+            getchar();
+        }
+        else if(retorno == CODIGO_DIGITOS_INSUFICIENTES){
+            printf("ERRO!\nCODIGO pequeno demais. Informe novamente: ");
+            scanf("%[^\n]s",&produto.codigo);
+            getchar();
+        }
+        else if(retorno CODIGO_LIMITE_DIGITOS_EXCEDIDO){
+            printf("ERRO!\nCODIGO possui no maximo 4 digitos. Informe novamente: ");
+            scanf("%[^\n]s",&produto.codigo);
+            getchar();
+        }
+        retorno = validaCodigo(produto.codigo);
+    }
+    printTelaCadastrarProdutoNome();
+    scanf("%[^\n]s",&produto.nome);
+    getchar();
+    retorno = validaNome(produto.nome);
+    while(retorno != ENTRADA_VALIDA){
+        if(retorno == NOME_CARACTER_INVALIDO){
+            printf("ERRO!\nNOME comporta apenas letras. Informe novamente: ");
+            scanf("%[^\n]s",&produto.nome);
+            getchar();
+        }
+        else if(retorno == NOME_DIGITOS_INSUFICIENTES){
+            printf("ERRO!\nNOME pequeno demais. Informe novamente: ");
+            scanf("%[^\n]s",&produto.nome);
+            getchar();
+        }
+        else if(retorno NOME_LIMITE_DIGITOS_EXCEDIDO){
+            printf("ERRO!\nNOME possui no maximo 15 digitos. Informe novamente: ");
+            scanf("%[^\n]s",&produto.nome);
+            getchar();
+        }
+        retorno = validaNome(produto.nome);
+    }
+    printTelaCadastroDesenvolvedorEmail();
+    scanf("%[^\n]s",&produto.emailLider);
+    getchar();
+    retorno = validaEmail(produto.emailLider);
+    while(retorno != ENTRADA_VALIDA){
+        if(retorno == EMAIL_CARACTER_INVALIDO){
+            printf("ERRO!\nEMAIL informado contem digito invalido. Informe novamente: ");
+            scanf("%[^\n]s",&produto.emailLider);
+            getchar();
+        }
+        if(retorno == EMAIL_FORMATO_INVALIDO){
+            printf("ERRO!\nEMAIL formato invalido. Informe novamente: ");
+            scanf("%[^\n]s",&produto.emailLider);
+            getchar();
+        }
+        else if(retorno == EMAIL_DIGITOS_INSUFICIENTES){
+            printf("ERRO!\nEMAIL nao pode ter menos que 3 digitos. Informe novamente: ");
+            scanf("%[^\n]s",&produto.emailLider);
+            getchar();
+        }
+        else if(retorno EMAIL_LIMITE_DIGITOS_EXCEDIDO){
+            printf("ERRO!\nEMAIL nao pode ter mais do que 20 digitos. Informe novamente: ");
+            scanf("%[^\n]s",&produto.emailLider);
+            getchar();
+        }
+        retorno = validaEmail(produto.emailLider);
+    }
+    printTelaCadastrarProdutoVersao();
+    scanf("%[^\n]s",&produto.versao);
+    getchar();
+    retorno = validaVersao(produto.versao);
+    while(retorno != ENTRADA_VALIDA){
+        if(retorno == VERSAO_CODIGO_INVALIDO){
+            printf("\nERRO!\nVERSAO invalida. Informe novamente: ");
+            scanf("%[^\n]s",&produto.versao);
+            getchar();
+        }else if(retorno == VERSAO_FORMATO_INVALIDO){
+            printf("\nERRO!\nVERSAO nao esta no formato valido. Informe novamente: ");
+            scanf("%[^\n]s",&produto.versao);
+            getchar();
+        }
+        retorno = validaVersao(produto.versao);
+    }
+    realizaCadastrarProduto(&produto);
+}
+
+/** \brief Função responsavel por enviar os dados coletados na "telaCadastrarProduto" para o módulo de logica de negocio e mostrar para o usuario o resultado do processamento.
+ *
+ * \param produto TipoProduto* Struct armazenado os dados sobre o produto que será cadastrado.
+ * \return void
+ *
+ */
+void realizaCadastrarProduto(TipoProduto * produto){
+    int retorno;
+    retorno = efetuarCadastrarProduto(produto);
+    if(retorno == PRODUTO_CADASTRADO){
+        printf("\Produto Cadastrado com Sucesso!\n");
+        printf("CODIGO: %s\nNOME: %s\nVERSAO: %s\nE-Mail do Lider de Produto: %s\n",
+               produto->codigo,produto->nome,produto->versao,produto->emailLider);
+    }else{
+        printf("\nERRO! Produto ja cadastrado!\n");
+    }
+    system("pause");
 }
 
 /** \brief Função responsavel pelo menu inicial apresentados as funcionalidades desponiveis para o Desenvolvedor Lider Produto.
@@ -1471,7 +1859,7 @@ void telaInicialDesenvolvedorLiderProjeto(TipoDesenvolvedor * usuario){
                 break;
             }
             case 3: {
-                //alocarLiderProduto();
+                telaAlocarLiderProduto();
                 break;
             }
             case 4: {
@@ -1497,15 +1885,15 @@ void telaInicialDesenvolvedorLiderProjeto(TipoDesenvolvedor * usuario){
                 break;
             }
             case 9: {
-                //removerLiderProduto();
+                telaRemoverLiderProduto();
                 break;
             }
             case 10: {
-                //removerProduto();
+                telaRemoverProduto();
                 break;
             }
             case 11: {
-                //cadastrarProduto();
+                telaCadastrarProduto();
                 break;
             }
             default:{
@@ -1515,7 +1903,4 @@ void telaInicialDesenvolvedorLiderProjeto(TipoDesenvolvedor * usuario){
         }
         limpaTela();
     }while(opcao < 12);
-}
-
-
 }

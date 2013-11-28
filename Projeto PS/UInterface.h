@@ -62,5 +62,17 @@ EXT void realizaRemoverDesenvolvedorDefeito(char *);
 EXT void telaInicialDesenvolvedorLiderProjeto(TipoDesenvolvedor *);
 EXT void printTelaInicialDesenvolvedorLiderProjeto(char *);
 EXT int realizarCancelarContaLiderProjeto(TipoDesenvolvedor *);
+EXT void telaAlocarLiderProduto(void);
+EXT void printTelaAlocarLiderProduto(void);
+EXT void realizaAlocarLiderProduto(char *, char *);
+EXT void telaRemoverLiderProduto(void);
+EXT void printTelaRemoverLiderProduto(void);
+EXT void printTelaRemoverProduto(void);
+EXT void telaRemoverProduto(void);
+EXT void realizaRemoverProduto(char *);
+EXT void telaCadastrarProduto(void);
+EXT void printTelaCadastrarProduto(void);
+EXT void printTelaCadastrarProdutoNome(void);
+EXT void printTelaCadastrarProdutoVersao(void);
 
 #endif // UINTERFACE_H_INCLUDED

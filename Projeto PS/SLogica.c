@@ -169,3 +169,50 @@ int efetuarCancelarContaLiderProjeto(TipoDesenvolvedor * usuario, char * email){
         return(DESENVOLVEDOR_CONTA_NAO_PODE_SER_CANCELADA);
     }
 }
+
+int efetuarAlocarLiderProduto(char * codigo, char * email){
+    if(strcmp(codigo,"test") == 0){
+        return(PRODUTO_LIDER_ALOCADO);
+    }
+    if(strcmp(codigo,"sapo") == 0){
+        return(PRODUTO_DESENVOLVEDOR_NAO_PODE_SER_LIDER);
+    }
+    if(strcmp(codigo,"yoko") == 0){
+        return(PRODUTO_JA_TEM_LIDER);
+    }
+    if(strcmp(codigo,"abcd") == 0){
+        return(PESQUISA_PRODUTO_NAO_ENCONTRADO);
+    }else{
+        return(PESQUISA_DESENVOLVEDOR_NAO_ENCONTRADO);
+    }
+}
+
+int efetuarRemoverLiderProduto(char * codigo){
+    if(strcmp(codigo,"test") == 0){
+        return(PRODUTO_LIDER_REMOVIDO);
+    }
+    if(strcmp(codigo,"abcd") == 0){
+        return(PESQUISA_PRODUTO_NAO_ENCONTRADO);
+    }else{
+        return(PRODUTO_SEM_LIDER);
+    }
+}
+
+int efetuarRemoverProduto(char * codigo){
+    if(strcmp(codigo,"test") == 0){
+        return(PRODUTO_REMOVIDO);
+    }
+    if(strcmp(codigo,"abcd") == 0){
+        return(PESQUISA_PRODUTO_NAO_ENCONTRADO);
+    }else{
+        return(PRODUTO_NAO_PODE_SER_REMOVIDO);
+    }
+}
+
+int efetuarCadastrarProduto(TipoProduto * produto){
+    if(strcmp(produto->codigo,"test") == 0){
+        return(PRODUTO_CADASTRADO);
+    }else{
+        return(PRODUTO_JA_CADASTRADO);
+    }
+}

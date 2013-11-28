@@ -112,9 +112,9 @@
 1385574116 c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\pacotedestructs.h
 	"TabelaDeCodigos.h"
 
-1385598891 c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\tabeladecodigos.h
+1385672501 c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\tabeladecodigos.h
 
-1385601098 c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\uinterface.h
+1385669631 c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\uinterface.h
 	"PacoteDeStructs.h"
 
 1385509186 source:c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\pdefeito.c
@@ -146,13 +146,13 @@
 1385570101 c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\spdesenvolvedor.h
 	"PacoteDeStructs.h"
 
-1385600777 source:c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\slogica.c
+1385672700 source:c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\slogica.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"SLogica.h"
 
-1385600599 c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\slogica.h
+1385670027 c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\slogica.h
 	"PacoteDeStructs.h"
 	"TabelaDeCodigos.h"
 
