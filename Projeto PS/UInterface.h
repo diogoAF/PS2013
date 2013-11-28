@@ -39,5 +39,28 @@ EXT void printTelaPesquisarProduto(void);
 EXT void realizaPesquisaProduto(TipoProduto *);
 EXT void printTelaPesquisarDefeito(void);
 EXT void realizaPesquisaDefeito(TipoDefeito*);
+EXT void printTelaVoluntariarDefeito(void);
+EXT void telaVoluntariarDefeito(void);
+EXT void realizaVoluntariarDefeito(TipoDefeito *);
+EXT void printTelaVotarDefeitoVoto(void);
+EXT void printTelaVotarDefeito(void);
+EXT void telaVotarDefeito(void);
+EXT void realizaVotarDefeito(char *,int);
+EXT void printTelaCadastrarDefeitoDescricao(void);
+EXT void printTelaCadastrarDefeitoCodigo(void);
+EXT void printTelaCadastrarDefeitoDataAbertura(void);
+EXT void printTelaCadastrarDefeito(void);
+EXT void realizaCadastrarDefeito(TipoDefeito *);
+EXT void telaCadastrarDefeito(void);
+EXT void printTelaInicialDesenvolvedorLiderProduto(char *);
+EXT void telaInicialDesenvolvedorLiderProduto(TipoDesenvolvedor *);
+EXT void printTelaAlocarDesenvolvedorDefeito(void);
+EXT void realizaAlocarDesenvolvedorDefeito(char *, char *);
+EXT void printTelaRemoverDesenvolvedorDefeito(void);
+EXT void removerDesenvolvedorDefeito(void);
+EXT void realizaRemoverDesenvolvedorDefeito(char *);
+EXT void telaInicialDesenvolvedorLiderProjeto(TipoDesenvolvedor *);
+EXT void printTelaInicialDesenvolvedorLiderProjeto(char *);
+EXT int realizarCancelarContaLiderProjeto(TipoDesenvolvedor *);
 
 #endif // UINTERFACE_H_INCLUDED

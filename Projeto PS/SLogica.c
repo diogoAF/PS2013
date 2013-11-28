@@ -4,13 +4,26 @@
 #include <string.h>
 #include "SLogica.h"
 
+/**
+* ATENÇÃO! Isto é apenas um STUB!
+*/
 int verificaLogin(TipoDesenvolvedor * usuario){
-    if(strcmp(usuario->email,"mitsuru@sees.org") == 0){
-        return(LOGIN_USUARIO_NAO_CADASTRADO);
-    }else{
+    if(strcmp(usuario->email,"teste@teste.com") == 0){
         usuario->categoria = DESENVOLVEDOR_COMUM;
-        strcpy(usuario->nome,"Sr. Usuario");
+        strcpy(usuario->nome,"Sr Usuario");
         return(LOGIN_REALIZADO);
+    }
+    if(strcmp(usuario->email,"motoko@gits.com") == 0){
+        usuario->categoria = DESENVOLVEDOR_LIDER_PRODUTO;
+        strcpy(usuario->nome,"Motoko Kusanagi");
+        return(LOGIN_REALIZADO);
+    }
+    if(strcmp(usuario->email,"mitsuru@sees.org") == 0){
+        usuario->categoria = DESENVOLVEDOR_LIDER_PROJETO;
+        strcpy(usuario->nome,"Mitsuru Kirijo");
+        return(LOGIN_REALIZADO);
+    }else{
+        return(LOGIN_USUARIO_NAO_CADASTRADO);
     }
 }
 
@@ -76,5 +89,83 @@ int efetuarPesquisaDefeito(TipoDefeito * defeito){
         return(PESQUISA_DEFEITO_ENCONTRADO);
     }else{
         return(PESQUISA_DEFEITO_NAO_ENCONTRADO);
+    }
+}
+
+int efetuarVoluntariarDefeito(TipoDefeito * defeito){
+    if(strcmp(defeito->codigo,"test") == 0){
+        return(DEFEITO_VOLUNTARIO_ACEITO);
+    }
+    if(strcmp(defeito->codigo,"revy") == 0){
+        return(DEFEITO_JA_ENCERRADO);
+    }
+    if(strcmp(defeito->codigo,"sapo") == 0){
+        return(DEFEITO_JA_EM_REPARO);
+    }
+    if(strcmp(defeito->codigo,"jill") == 0){
+        return(DEFEITO_DESENVOLVEDOR_JA_VOLUNTARIO);
+    }else{
+        return(PESQUISA_DEFEITO_NAO_ENCONTRADO);
+    }
+}
+
+int efetuarVotarDefeito(char * codigo, int voto){
+    if(strcmp(codigo,"test") == 0){
+        return(DEFEITO_VOTADO);
+    }
+    if(strcmp(codigo,"revy") == 0){
+        return(DEFEITO_JA_ENCERRADO);
+    }
+    if(strcmp(codigo,"sapo") == 0){
+        return(DEFEITO_JA_EM_REPARO);
+    }else{
+        return(PESQUISA_DEFEITO_NAO_ENCONTRADO);
+    }
+}
+
+int efetuarCadastrarDefeito(TipoDefeito * defeito){
+    if(strcmp(defeito->codigo,"test") == 0){
+        return(DEFEITO_CADASTRADO);
+    }else{
+        return(DEFEITO_JA_CADASTRADO);
+    }
+}
+
+int efetuarAlocarDesenvolvedorDefeito(char * codigo, char * email){
+    if(strcmp(codigo,"test") == 0){
+        return(DESENVOLVEDOR_ALOCADO_DEFEITO);
+    }
+    if(strcmp(codigo,"sapo") == 0){
+        return(DESENVOLVEDOR_NAO_PODE_SER_ALOCADO);
+    }
+    if(strcmp(codigo,"abcd") == 0){
+        return(PESQUISA_DEFEITO_NAO_ENCONTRADO);
+    }else{
+        return(PESQUISA_DESENVOLVEDOR_NAO_ENCONTRADO);
+    }
+}
+
+int efetuarRemoverDesenvolvedorDefeito(char * codigo){
+    if(strcmp(codigo,"test") == 0){
+        return(DESENVOLVEDOR_REMOVIDO_DEFEITO);
+    }
+    if(strcmp(codigo,"sapo") == 0){
+        return(DEFEITO_NAO_POSSUI_DESENVOLVEDOR_ALOCADO);
+    }
+    if(strcmp(codigo,"abcd") == 0){
+        return(PESQUISA_DEFEITO_NAO_ENCONTRADO);
+    }else{
+        return(DEFEITO_JA_ENCERRADO);
+    }
+}
+
+int efetuarCancelarContaLiderProjeto(TipoDesenvolvedor * usuario, char * email){
+    if(strcmp(email,"teste@teste.com") == 0){
+        return(PESQUISA_DESENVOLVEDOR_NAO_ENCONTRADO);
+    }
+    if(strcmp(usuario->nome,"teste") == 0){
+        return(DESENVOLVEDOR_CONTA_CANCELADA);
+    }else{
+        return(DESENVOLVEDOR_CONTA_NAO_PODE_SER_CANCELADA);
     }
 }
