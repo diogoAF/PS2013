@@ -5,22 +5,12 @@
 #include "ValidacaoEntrada.h"
 #include "SLogica.h"
 
-/** \brief A função limpa a tela do prompt.
- *
- * \param void
- * \return void
- *
- */
+
 void limpaTela(void){
     system("cls");
 }
 
-/** \brief Função responsável por iniciar as funções básicas apresentadas no menu inicial do Software.
- *
- * \param void
- * \return void
- *
- */
+
 void start(void){
     int opcao;
 
@@ -46,12 +36,7 @@ void start(void){
     printf("\nFinalizando...\n");
 }
 
-/** \brief A função printa no prompt o Cabeçalho do Software.
- *
- * \param void
- * \return void
- *
- */
+
 void printCabecalho(void){
     printf("***************************************\n");
     printf("***************************************\n");
@@ -60,12 +45,7 @@ void printCabecalho(void){
     printf("***************************************\n");
 }
 
-/** \brief A função printa no prompt as nuancias da Tela Inicial
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaInicial(void){
     printf("** 1- Cadastrar                      **\n");
     printf("** 2- Login                          **\n");
@@ -74,115 +54,60 @@ void printTelaInicial(void){
     printf("Escolha: ");
 }
 
-/** \brief Função printa no prompt o inicio da Tela de Cadastro de Desenvolvedor. Também usada para o cadastro inicial.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaCadastroDesenvolvedorNome(void){
     printf("**      CADASTRAR DESENVOLVEDOR      **\n");
     printf("***************************************\n");
     printf("Informe o NOME: ");
 }
 
-/** \brief Função printa no prompt a solicitação da senha.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaCadastroDesenvolvedorSenha(void){
     printf("Informe a SENHA: ");
 }
 
-/** \brief Função printa no prompt a solicitação do E-mail.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaCadastroDesenvolvedorEmail(void){
     printf("Informe o E-MAIL: ");
 }
 
-/** \brief Função printa no prompt a solicitação do Voto. Complemento da Tela de Votar Defeito.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaVotarDefeitoVoto(void){
     printf("Informe o seu VOTO: ");
 }
 
-/** \brief Função printa no prompt a solicitação da DESCRICAO. Complemento da Tela de Cadastrar Defeito.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaCadastrarDefeitoDescricao(void){
     printf("Informe a DESCRICAO: ");
 }
 
-/** \brief Função printa no prompt a solicitação do CODIGO DO PRODUTO. Complemento da Tela de Cadastrar Defeito.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaCadastrarDefeitoCodigo(void){
     printf("Informe o CODIGO do PRODUTO: ");
 }
 
-/** \brief Função printa no prompt a solicitação da DATA DE ABERTURA. Complemento da Tela de Cadastrar Defeito.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaCadastrarDefeitoDataAbertura(void){
     printf("Informe o Dia, Mes e Ano (Data de Abertura): ");
 }
 
-/** \brief Função printa no prompt a solicitação do NOME.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaCadastrarProdutoNome(void){
     printf("Informe o NOME: ");
 }
 
-/** \brief Função printa no prompt a solicitação da versão. Complemento da Tela de Cadastrar Produto.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaCadastrarProdutoVersao(void){
     printf("Informe a VERSAO: ");
 }
 
-/** \brief Função printa no prompt a solicitação do Login.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaLogin(void){
     printf("**              LOGIN                **\n");
     printf("***************************************\n");
 }
 
-/** \brief função que printa no prompt a Tela Inicial com todas as funcionalidades para um Desenvolvedor Comum.
- *
- * \param nome char* Nome do desenvolvedor que está utilizando o sistema.
- * \return void
- *
- */
+
 void printtelaInicialDesenvolvedorComum(char * nome){
     printf("** Bem Vindo, %s\n",nome);
     printf("***************************************\n");
@@ -199,12 +124,7 @@ void printtelaInicialDesenvolvedorComum(char * nome){
     printf("Escolha: ");
 }
 
-/** \brief função que printa no prompt a Tela Inicial com todas as funcionalidades para um Desenvolvedor Lider de Produto.
- *
- * \param nome char* Nome do desenvolvedor que está utilizando o sistema.
- * \return void
- *
- */
+
 void printTelaInicialDesenvolvedorLiderProduto(char * nome){
     printf("** Bem Vindo, %s\n",nome);
     printf("***************************************\n");
@@ -222,12 +142,7 @@ void printTelaInicialDesenvolvedorLiderProduto(char * nome){
     printf("Escolha: ");
 }
 
-/** \brief função que printa no prompt a Tela Inicial com todas as funcionalidades para um Desenvolvedor Lider de Projeto.
- *
- * \param nome char* Nome do desenvolvedor que está utilizando o sistema.
- * \return void
- *
- */
+
 void printTelaInicialDesenvolvedorLiderProjeto(char * nome){
     printf("** Bem Vindo, %s\n",nome);
     printf("***************************************\n");
@@ -247,178 +162,105 @@ void printTelaInicialDesenvolvedorLiderProjeto(char * nome){
     printf("Escolha: ");
 }
 
-/** \brief Função que printa no prompt a Tela de alterar cadastro.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaAlterarCadastroNome(void){
     printf("**         ALTERAR CADASTRO          **\n");
     printf("***************************************\n");
     printf("Informe o NOME: ");
 }
 
-/** \brief Função que printa no prompt a Tela de cancelar conta.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaCancelarConta(void){
     printf("**          CANCELAR CONTA           **\n");
     printf("***************************************\n");
     printf("Tem certeza que deseja cancelar sua conta?[s/n]");
 }
 
-/** \brief Função que printa no prompt a Tela de pesquisar desenvolvedor.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaPesquisarDesenvolvedor(void){
     printf("**      PESQUISAR DESENVOLVEDOR      **\n");
     printf("***************************************\n");
     printf("Informe o NOME: ");
 }
 
-/** \brief Função que printa no prompt a Tela de pesquisar produto.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaPesquisarProduto(void){
     printf("**         PESQUISAR PRODUTO         **\n");
     printf("***************************************\n");
     printf("Informe o CODIGO: ");
 }
 
-/** \brief Função que printa no prompt a Tela de pesquisar defeito.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaPesquisarDefeito(void){
     printf("**         PESQUISAR DEFEITO         **\n");
     printf("***************************************\n");
     printf("Informe o CODIGO: ");
 }
 
-/** \brief Função que printa no prompt a Tela de voluntariar defeito.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaVoluntariarDefeito(void){
     printf("**        VOLUNTARIAR DEFEITO        **\n");
     printf("***************************************\n");
     printf("Informe o CODIGO do Defeito: ");
 }
 
-/** \brief Função que printa no prompt a Tela de votar defeito.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaVotarDefeito(void){
     printf("**           VOTAR DEFEITO           **\n");
     printf("***************************************\n");
     printf("Informe o CODIGO do Defeito: ");
 }
 
-/** \brief Função que printa no prompt a Tela de cadastrar defeito.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaCadastrarDefeito(void){
     printf("**        CADASTRAR DEFEITO          **\n");
     printf("***************************************\n");
     printf("Informe o CODIGO: ");
 }
 
-/** \brief Função que printa no prompt a Tela de cadastrar produto.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaCadastrarProduto(void){
     printf("**        CADASTRAR PRODUTO          **\n");
     printf("***************************************\n");
     printf("Informe o CODIGO: ");
 }
 
-/** \brief Função que printa no prompt a Tela de alocar desenvolvedor p/ defeito.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaAlocarDesenvolvedorDefeito(void){
     printf("**     ALOCAR DESENV. P/ DEFEITO     **\n");
     printf("***************************************\n");
     printf("Informe o CODIGO do Defeito: ");
 }
 
-/** \brief Função que printa no prompt a Tela de alocar lider produto.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaAlocarLiderProduto(void){
     printf("**      ALOCAR LIDER DE PRODUTO      **\n");
     printf("***************************************\n");
     printf("Informe o CODIGO do Produto: ");
 }
 
-/** \brief Função que printa no prompt a Tela de remover lider de um produto.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaRemoverLiderProduto(void){
     printf("**      REMOVER LIDER DE PRODUTO      **\n");
     printf("***************************************\n");
     printf("Informe o CODIGO do Produto: ");
 }
 
-/** \brief Função que printa no prompt a Tela de remover um produto.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaRemoverProduto(void){
     printf("**          REMOVER PRODUTO          **\n");
     printf("***************************************\n");
     printf("Informe o CODIGO do Produto: ");
 }
 
-/** \brief Função que printa no prompt a Tela de remover desenvolvedor do defeito.
- *
- * \param void
- * \return void
- *
- */
+
 void printTelaRemoverDesenvolvedorDefeito(void){
     printf("**    REMOVER DESENV. DO DEFEITO     **\n");
     printf("***************************************\n");
     printf("Informe o CODIGO do Defeito: ");
 }
 
-/** \brief Função responsavel por efetivamente coletar e validar os dados de entrada para o cadastro de um Desenvolvedor.
- *
- * \return void
- */
+
 void telacadastraDesenvolvedor(){
     int retorno;
     TipoDesenvolvedor desenvolvedor;
@@ -498,12 +340,7 @@ void telacadastraDesenvolvedor(){
     cadastraDesenvolvedor(&desenvolvedor);
 }
 
-/** \brief  Função envia os dados do desenvolvedor ao módulo de lógica de negócio para processamento do cadastro.
- *
- * \param desenvolvedor TipoDesenvolvedor* Struct  que armazena os dados do possivel futuro desenvolvedor.
- * \return void
- *
- */
+
 void cadastraDesenvolvedor(TipoDesenvolvedor * desenvolvedor){
     if(efetuaCadastroDesenvolvedor(desenvolvedor) == DESENVOLVEDOR_CADASTRO_REALIZADO){
         printf("\nUSUARIO CADASTRADO!");
@@ -516,10 +353,7 @@ void cadastraDesenvolvedor(TipoDesenvolvedor * desenvolvedor){
     }
 }
 
-/** \brief Função que coleta e valida os dados necessários para a realização do Login.
- *
- * \return void
- */
+
 void telaRealizaLogin(){
     int retorno;
     TipoDesenvolvedor usuario;
@@ -578,12 +412,7 @@ void telaRealizaLogin(){
     realizaLogin(&usuario);
 }
 
-/** \brief Função responsavel por coletar e validar os dados necessarios para a realizacao da alteracao do cadastro do usuario. Caso ocorra algum erro inesperado, o usuario é avisado e os dados antigos são recuperados.
- *
- * \param usuario TipoDesenvolvedor* Dados do usuario do sistema.
- * \return void
- *
- */
+
 void telaAlterarConta(TipoDesenvolvedor * usuario){
     int retorno;
     char nome[VET_NOME],senha[VET_SENHA];
@@ -640,12 +469,7 @@ void telaAlterarConta(TipoDesenvolvedor * usuario){
     }
 }
 
-/** \brief Passa os dados para serem alterados para o modulo de negócio.
- *
- * \param usuario TipoDesenvolvedor* Novos dados atualizados do usuario.
- * \return int Caso ocorra algum erro inesperado, será retornado o código ERRO_INESPERADO.
- *
- */
+
 int realizaAlteracaoCadastro(TipoDesenvolvedor * usuario){
     if(efetuarAlterarCadastro(usuario) == DESENVOLVEDOR_CADASTRO_ATUALIZADO){
         printf("\nALTERACAO REALIZADA COM SUCESSO!!\n");
@@ -659,12 +483,7 @@ int realizaAlteracaoCadastro(TipoDesenvolvedor * usuario){
     }
 }
 
-/** \brief Função responsavel pela tela de cancelamento de conta do usuario.
- *
- * \param usuario TipoDesenvolvedor* Usuario utilizando o sistema.
- * \return int Código de Retorno
- *
- */
+
 int telaCancelarConta(TipoDesenvolvedor * usuario){
  char opcao;
  printCabecalho();
@@ -685,12 +504,7 @@ int telaCancelarConta(TipoDesenvolvedor * usuario){
   }
 }
 
-/** \brief Função que passa os dados do usuario que deseja ter a conta deletada para o módulo de negócio.
- *
- * \param usuario TipoDesenvolvedor* Usuario utilizando o sistema.
- * \return int Código de Retorno.
- *
- */
+
 int realizarCancelarConta(TipoDesenvolvedor * usuario){
     if(efetuarCancelarConta(usuario) == DESENVOLVEDOR_CONTA_CANCELADA){
         printf("\nCONTA CANCELADA COM SUCESSO!!\n");
@@ -704,12 +518,7 @@ int realizarCancelarConta(TipoDesenvolvedor * usuario){
     }
 }
 
-/** \brief função que estrutura a tela de pesquisa de desenvolvedor.
- *
- * \param void
- * \return void
- *
- */
+
 void telaPesquisarDesenvolvedor(void){
     int retorno;
     TipoDesenvolvedor desenvolvedor;
@@ -739,12 +548,7 @@ void telaPesquisarDesenvolvedor(void){
     realizaPesquisaDesenvolvedor(&desenvolvedor);
 }
 
-/** \brief função responsavel por mandar os dados coletados para o módulo de lógica de negócio para o correto processamento, quando recebe o resultado, passa para o usuario.
- *
- * \param desenvolvedor TipoDesenvolvedor* Struct onde o NOME do desenvolvedor que deve ser pesquisado está armazenado.
- * \return void
- *
- */
+
 void realizaPesquisaDesenvolvedor(TipoDesenvolvedor * desenvolvedor){
     if(efetuarPesquisaDesenvolvedor(desenvolvedor) == PESQUISA_DESENVOLVEDOR_ENCONTRADO){
         printf("\nDesenvolvedor Encontrado!");
@@ -766,12 +570,7 @@ void realizaPesquisaDesenvolvedor(TipoDesenvolvedor * desenvolvedor){
     }
 }
 
-/** \brief função que estrutura a tela de pesquisa de produto.
- *
- * \param void
- * \return void
- *
- */
+
 void telaPesquisarProduto(void){
     TipoProduto produto;
     int retorno;
@@ -803,12 +602,7 @@ void telaPesquisarProduto(void){
     realizaPesquisaProduto(&produto);
 }
 
-/** \brief função responsavel por mandar os dados coletados para o módulo de lógica de negócio para o correto processamento, quando recebe o resultado, passa para o usuario.
- *
- * \param produto TipoProduto* Struct onde o CODIGO do PRODUTO que deve ser pesquisado está armazenado.
- * \return void
- *
- */
+
 void realizaPesquisaProduto(TipoProduto * produto){
     if(efetuarPesquisaProduto(produto) == PESQUISA_PRODUTO_ENCONTRADO){
         printf("\nProduto Encontrado!");
@@ -821,12 +615,7 @@ void realizaPesquisaProduto(TipoProduto * produto){
     }
 }
 
-/** \brief função que estrutura a tela de pesquisa de defeito.
- *
- * \param void
- * \return void
- *
- */
+
 void telaPesquisarDefeito(void){
     TipoDefeito defeito;
     int retorno;
@@ -858,12 +647,7 @@ void telaPesquisarDefeito(void){
     realizaPesquisaDefeito(&defeito);
 }
 
-/** \brief função responsavel por mandar os dados coletados para o módulo de lógica de negócio para o correto processamento, quando recebe o resultado, passa para o usuario.
- *
- * \param defeito TipoDefeito* Struct onde o CODIGO do DEFEITO que deve ser pesquisado está armazenado.
- * \return void
- *
- */
+
 void realizaPesquisaDefeito(TipoDefeito * defeito){
     if(efetuarPesquisaDefeito(defeito) == PESQUISA_DEFEITO_ENCONTRADO){
         printf("\nDefeito Encontrado!");
@@ -899,12 +683,7 @@ void realizaPesquisaDefeito(TipoDefeito * defeito){
     }
 }
 
-/** \brief função que estrutura a tela de voluntariar de defeito.
- *
- * \param void
- * \return void
- *
- */
+
 void telaVoluntariarDefeito(void){
     TipoDefeito defeito;
     int retorno;
@@ -934,12 +713,7 @@ void telaVoluntariarDefeito(void){
     realizaVoluntariarDefeito(&defeito);
 }
 
-/** \brief função responsavel por mandar os dados coletados na "telaVoluntariarDefeito" para o módulo de lógica de negócio para o correto processamento, quando recebe o resultado, passa para o usuario.
- *
- * \param defeito TipoDefeito* Struct onde o CODIGO do DEFEITO que deve ser pesquisado está armazenado.
- * \return void
- *
- */
+
 void realizaVoluntariarDefeito(TipoDefeito * defeito){
     int retorno;
     retorno = efetuarVoluntariarDefeito(defeito);
@@ -961,12 +735,7 @@ void realizaVoluntariarDefeito(TipoDefeito * defeito){
     system("pause");
 }
 
-/** \brief função que estrutura a tela de votar no defeito.
- *
- * \param void
- * \return void
- *
- */
+
 void telaVotarDefeito(void){
     char codigo[VET_CODIGO];
     int retorno, voto;
@@ -1013,13 +782,7 @@ void telaVotarDefeito(void){
     realizaVotarDefeito(codigo,voto);
 }
 
-/** \brief função responsavel por mandar os dados coletados na "telaVotarDefeito" para o módulo de lógica de negócio para o correto processamento, quando recebe o resultado, passa para o usuario.
- *
- * \param codigo char* codigo do defeito que esta sendo votado.
- * \param voto int valor do voto.
- * \return void
- *
- */
+
 void realizaVotarDefeito(char * codigo, int voto){
     int retorno;
     retorno = efetuarVotarDefeito(codigo,voto);
@@ -1038,12 +801,7 @@ void realizaVotarDefeito(char * codigo, int voto){
     system("pause");
 }
 
-/** \brief Função que coleta e valida os dados necessarios para o cadastro do defeito.
- *
- * \param void
- * \return void
- *
- */
+
 void telaCadastrarDefeito(void){
     TipoDefeito defeito;
     int retorno;
@@ -1133,12 +891,7 @@ void telaCadastrarDefeito(void){
     realizaCadastrarDefeito(&defeito);
 }
 
-/** \brief Função responsavel por enviar os dados coletados na "telaCadastrarDefeito" para o módulo de logica de negocio e mostrar para o usuario o resultado do processamento.
- *
- * \param defeito TipoDefeito* Struct que contem os dados do defeito a ser cadastrado.
- * \return void
- *
- */
+
 void realizaCadastrarDefeito(TipoDefeito * defeito){
     defeito->estado = ESTADO_NOVO;
     defeito->votos = 0;
@@ -1152,12 +905,7 @@ void realizaCadastrarDefeito(TipoDefeito * defeito){
     system("pause");
 }
 
-/** \brief Função responsavel pelo menu inicial apresentados as funcionalidades desponiveis para o Desenvolvedor Comum.
- *
- * \param usuario TipoDesenvolvedor* Struct contendo as informações do usuário do sistema.
- * \return void
- *
- */
+
 void telaInicialDesenvolvedorComum(TipoDesenvolvedor * usuario){
     int opcao;
 
@@ -1216,12 +964,7 @@ void telaInicialDesenvolvedorComum(TipoDesenvolvedor * usuario){
     }while(opcao < 9);
 }
 
-/** \brief Função que coleta e valida os dados necessarios para o cadastro do defeito.
- *
- * \param void
- * \return void
- *
- */
+
 void alocarDesenvolvedorDefeito(void){
     char email[VET_EMAIL], codigo[VET_CODIGO];
     int retorno;
@@ -1280,14 +1023,7 @@ void alocarDesenvolvedorDefeito(void){
     realizaAlocarDesenvolvedorDefeito(codigo, email);
 }
 
-/** \brief Função responsavel por enviar os dados coletados na "alocarDesenvolvedorDefeito" para o módulo de logica de negocio e mostrar para o usuario o resultado do processamento.
- *
- * \param codigo char* Codigo do defeito ao qual o desenvolvedor será alocado.
- * \param email char* E-mail do desenvolvedor que será alocao ao defeito.
 
- * \return void
- *
- */
 void realizaAlocarDesenvolvedorDefeito(char * codigo, char * email){
     int retorno;
     retorno = efetuarAlocarDesenvolvedorDefeito(codigo, email);
@@ -1303,12 +1039,7 @@ void realizaAlocarDesenvolvedorDefeito(char * codigo, char * email){
     system("pause");
 }
 
-/** \brief Função que coleta e valida o codigo de qual Defeito o desenvolvedor sera removido. Como cada defeito é corrigido por apenas um desenvolvedor, não é necessário perguntar o e-mail do desenvolvedor.
- *
- * \param void
- * \return void
- *
- */
+
 void removerDesenvolvedorDefeito(void){
     char codigo[VET_CODIGO];
     int retorno;
@@ -1339,12 +1070,7 @@ void removerDesenvolvedorDefeito(void){
     realizaRemoverDesenvolvedorDefeito(codigo);
 }
 
-/** \brief Função responsavel por enviar o dado coletado na função "removerDesenvolvedorDefeito" para o módulo de logica de negocio e mostrar para o usuario o resultado do processamento.
- *
- * \param codigo char* Codigo do defeito ao qual o desenvolvedor será removido.
- * \return void
- *
- */
+
 void realizaRemoverDesenvolvedorDefeito(char * codigo){
     int retorno;
     retorno = efetuarRemoverDesenvolvedorDefeito(codigo);
@@ -1360,12 +1086,7 @@ void realizaRemoverDesenvolvedorDefeito(char * codigo){
     system("pause");
 }
 
-/** \brief Função responsavel pelo menu inicial apresentados as funcionalidades desponiveis para o Desenvolvedor Lider Produto.
- *
- * \param usuario TipoDesenvolvedor* Struct contendo as informações do usuário do sistema.
- * \return void
- *
- */
+
 void telaInicialDesenvolvedorLiderProduto(TipoDesenvolvedor * usuario){
     int opcao;
 
@@ -1428,12 +1149,7 @@ void telaInicialDesenvolvedorLiderProduto(TipoDesenvolvedor * usuario){
     }while(opcao < 10);
 }
 
-/** \brief Função que passa os dados do lider de projeto que deseja ter a conta deletada para o módulo de negócio.
- *
- * \param usuario TipoDesenvolvedor* Lider de Projeto utilizando o sistema.
- * \return int Código de Retorno.
- *
- */
+
 int realizarCancelarContaLiderProjeto(TipoDesenvolvedor * usuario){
     char email[VET_EMAIL];
     int retorno;
@@ -1483,12 +1199,7 @@ int realizarCancelarContaLiderProjeto(TipoDesenvolvedor * usuario){
     }
 }
 
-/** \brief Função que coleta e valida os dados necessarios para o alocar o lider de produto.
- *
- * \param void
- * \return void
- *
- */
+
 void telaAlocarLiderProduto(void){
     char email[VET_EMAIL], codigo[VET_CODIGO];
     int retorno;
@@ -1547,14 +1258,7 @@ void telaAlocarLiderProduto(void){
     realizaAlocarLiderProduto(codigo, email);
 }
 
-/** \brief Função responsavel por enviar os dados coletados na "printTelaAlocarLiderProduto" para o módulo de logica de negocio e mostrar para o usuario o resultado do processamento.
- *
- * \param codigo char* Codigo do produto ao qual o desenvolvedor será alocado como lider.
- * \param email char* E-mail do desenvolvedor que será alocao como lider do produto.
 
- * \return void
- *
- */
 void realizaAlocarLiderProduto(char * codigo, char * email){
     int retorno;
     retorno = efetuarAlocarLiderProduto(codigo, email);
@@ -1572,12 +1276,7 @@ void realizaAlocarLiderProduto(char * codigo, char * email){
     system("pause");
 }
 
-/** \brief Função que coleta e valida os dados necessarios para o remover o lider de um produto.
- *
- * \param void
- * \return void
- *
- */
+
 void telaRemoverLiderProduto(void){
     char codigo[VET_CODIGO];
     int retorno;
@@ -1608,12 +1307,7 @@ void telaRemoverLiderProduto(void){
     realizaRemoverLiderProduto(codigo);
 }
 
-/** \brief Função responsavel por enviar os dados coletados na "printTelaRemoverLiderProduto" para o módulo de logica de negocio e mostrar para o usuario o resultado do processamento.
- *
- * \param codigo char* Codigo do produto ao qual o desenvolvedor será removido como lider.
- * \return void
- *
- */
+
 void realizaRemoverLiderProduto(char * codigo){
     int retorno;
     retorno = efetuarRemoverLiderProduto(codigo);
@@ -1627,12 +1321,7 @@ void realizaRemoverLiderProduto(char * codigo){
     system("pause");
 }
 
-/** \brief Função que coleta e valida os dados necessarios para o remover um produto.
- *
- * \param void
- * \return void
- *
- */
+
 void telaRemoverProduto(void){
     char codigo[VET_CODIGO];
     int retorno;
@@ -1663,12 +1352,7 @@ void telaRemoverProduto(void){
     realizaRemoverProduto(codigo);
 }
 
-/** \brief Função responsavel por enviar os dados coletados na "realizaRemoverProduto" para o módulo de logica de negocio e mostrar para o usuario o resultado do processamento.
- *
- * \param codigo char* Codigo do produto que será excluido.
- * \return void
- *
- */
+
 void realizaRemoverProduto(char * codigo){
     int retorno;
     retorno = efetuarRemoverProduto(codigo);
@@ -1682,12 +1366,7 @@ void realizaRemoverProduto(char * codigo){
     system("pause");
 }
 
-/** \brief função que envia os dados de login para o módulo de lógica de negócio.
- *
- * \param usuario TipoDesenvolvedor* struct onde será armazenado os dados do usuario do sistema, caso o login seja bem sucedido.
- * \return void
- *
- */
+
 void realizaLogin(TipoDesenvolvedor * usuario){
     if(verificaLogin(usuario) == LOGIN_REALIZADO){
         printf("\nLOGIN REALIZADO COM SUCESSO!!\n");
@@ -1709,12 +1388,7 @@ void realizaLogin(TipoDesenvolvedor * usuario){
     }
 }
 
-/** \brief Função que coleta e valida os dados necessarios para o cadastro do defeito.
- *
- * \param void
- * \return void
- *
- */
+
 void telaCadastrarProduto(void){
     TipoProduto produto;
     int retorno;
@@ -1810,12 +1484,7 @@ void telaCadastrarProduto(void){
     realizaCadastrarProduto(&produto);
 }
 
-/** \brief Função responsavel por enviar os dados coletados na "telaCadastrarProduto" para o módulo de logica de negocio e mostrar para o usuario o resultado do processamento.
- *
- * \param produto TipoProduto* Struct armazenado os dados sobre o produto que será cadastrado.
- * \return void
- *
- */
+
 void realizaCadastrarProduto(TipoProduto * produto){
     int retorno;
     retorno = efetuarCadastrarProduto(produto);
@@ -1829,12 +1498,7 @@ void realizaCadastrarProduto(TipoProduto * produto){
     system("pause");
 }
 
-/** \brief Função responsavel pelo menu inicial apresentados as funcionalidades desponiveis para o Desenvolvedor Lider Produto.
- *
- * \param usuario TipoDesenvolvedor* Struct contendo as informações do usuário do sistema.
- * \return void
- *
- */
+
 void telaInicialDesenvolvedorLiderProjeto(TipoDesenvolvedor * usuario){
     int opcao;
 
