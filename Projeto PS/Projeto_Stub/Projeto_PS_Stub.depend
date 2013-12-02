@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1386003782 source:c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\projeto_stub\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ValidacaoEntrada.h"
+	"UInterface.h"
+
+1385743595 c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\projeto_stub\validacaoentrada.h
+	"PacoteDeStructs.h"
+	"TabelaDeCodigos.h"
+
+1385989703 c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\projeto_stub\pacotedestructs.h
+	"TabelaDeCodigos.h"
+
+1385995161 c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\projeto_stub\tabeladecodigos.h
+
+1385745660 c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\projeto_stub\uinterface.h
+	"PacoteDeStructs.h"
+
+1385745657 source:c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\projeto_stub\uinterface.c
+	<stdio.h>
+	<stdlib.h>
+	"UInterface.h"
+	"ValidacaoEntrada.h"
+	"SLogica.h"
+
+1385736088 c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\projeto_stub\slogica.h
+	"PacoteDeStructs.h"
+	"TabelaDeCodigos.h"
+
+1385743598 source:c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\projeto_stub\validacaoentrada.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"ValidacaoEntrada.h"
+
