@@ -17,7 +17,7 @@ typedef struct{
     char nome[VET_NOME],
     senha[VET_SENHA],
     email[VET_EMAIL];
-    int categoria;
+    int categoria,defeito1,defeito2;
 }TipoDesenvolvedor;
 
 /**

@@ -5,6 +5,7 @@
 #define EXT extern
 #else EXT
 #endif
+#include "PacoteDeStructs.h"
 
 /** \brief Função de cadastro de defeito
  *

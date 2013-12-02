@@ -5,7 +5,7 @@
 
 #include "SPDesenvolvedor.h"
 
-#define Tamanho 10 //esse é o tamanho da string que guarda a posicao do topo da pilha de reaproveitamento de espaco
+#define TAMANHO_POSICAO 10 //esse é o tamanho da string que guarda a posicao do topo da pilha de reaproveitamento de espaco
 #define HEXA 16 //guarda o numero de digitos em hexadecimal
 #define TAM_TOTAL (VET_EMAIL-1 + VET_NOME-1 + VET_SENHA-1 + 3 + 1 + 1 + 1 )
 //+3: espaços separadores no registro //+1: nova linha //+1: o tamanho do categoria
@@ -30,9 +30,9 @@
     ajustaString(desenvolvedor->nome, VET_NOME);
     ajustaString(desenvolvedor->senha, VET_SENHA);
 
-    char espacoVago[Tamanho + 1];//+1: espaço para armazenar o caracter NULL
-    espacoVago[Tamanho] = NULL;
-    fread(espacoVago, sizeof(char), Tamanho, arquivo);
+    char espacoVago[TAMANHO_POSICAO + 1];//+1: espaço para armazenar o caracter NULL
+    espacoVago[TAMANHO_POSICAO] = NULL;
+    fread(espacoVago, sizeof(char), TAMANHO_POSICAO, arquivo);
     long int posicaoVaga = strtol(espacoVago, NULL, HEXA);
 
     if(posicaoVaga == FALSE){
@@ -53,7 +53,7 @@
     }else{
         //printf("posicaoVaga: %d\n", posicaoVaga);
         fseek(arquivo, posicaoVaga + 1, SEEK_SET);//+1:ignora o * indicador de espaço vago
-        fread(espacoVago, sizeof(char), Tamanho, arquivo);//leitura do posicionamento do proximo espaço vago
+        fread(espacoVago, sizeof(char), TAMANHO_POSICAO, arquivo);//leitura do posicionamento do proximo espaço vago
 
         fseek(arquivo, posicaoVaga, SEEK_SET);//volta o carro para o inicio do registro
         fwrite(desenvolvedor->email, sizeof(char), VET_EMAIL - 1, arquivo);
@@ -64,7 +64,7 @@
         fprintf(arquivo, " ");
         fprintf(arquivo, "%d\n", desenvolvedor->categoria);
         fseek(arquivo, 0, SEEK_SET);
-        fwrite(espacoVago, sizeof(char), Tamanho, arquivo);
+        fwrite(espacoVago, sizeof(char), TAMANHO_POSICAO, arquivo);
     }
  }
 
@@ -77,11 +77,11 @@
     */
 
     //pula o indicador de espaço livre
-    char disponivel[Tamanho+1];
+    char disponivel[TAMANHO_POSICAO+1];
     fseek(arquivo, SEEK_SET, SEEK_SET);
-    fread(disponivel, sizeof(char), Tamanho, arquivo);
-    disponivel[ Tamanho ] = NULL;
-    fseek(arquivo, Tamanho + 2, SEEK_SET);
+    fread(disponivel, sizeof(char), TAMANHO_POSICAO, arquivo);
+    disponivel[ TAMANHO_POSICAO ] = NULL;
+    fseek(arquivo, TAMANHO_POSICAO + 2, SEEK_SET);
     //+1: ignora o "\n" existente ao final da linha
 
     //busca o registro no arquivo
@@ -97,7 +97,7 @@
     }while( strcmp(buffer, registro->email) );
 
     fseek(arquivo, 0, SEEK_SET);
-    fprintf(arquivo, "%0*x",Tamanho, posicao);
+    fprintf(arquivo, "%0*x",TAMANHO_POSICAO, posicao);
     //a posição é salva em hexadecimal para aumentar o alcance do indice num numero menor de caracteres
     fseek(arquivo, posicao, SEEK_SET);
     fprintf(arquivo, "*%s", disponivel);
@@ -119,7 +119,7 @@ int existeUsuario(FILE *arquivo, char *chavePrimaria, long int *posicao){
     ajustaString(chavePrimaria, VET_EMAIL);
     char buffer[VET_EMAIL];
     char lixo[TAM_TOTAL - VET_EMAIL + 1];
-    fseek(arquivo, Tamanho + 2, SEEK_SET);
+    fseek(arquivo, TAMANHO_POSICAO + 2, SEEK_SET);
     do{
         fread(buffer, sizeof(char), VET_EMAIL - 1, arquivo);
         buffer[VET_EMAIL - 1] = NULL;

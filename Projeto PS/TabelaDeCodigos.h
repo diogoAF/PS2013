@@ -99,6 +99,9 @@
 #define DESENVOLVEDOR_LIDER_PRODUTO 101
 #define DESENVOLVEDOR_LIDER_PROJETO 102
 
+#define HEXA 16
+#define TAMANHO_POSICAO 10
+
 /**
 * Constantes de tamanho de vetores
 */

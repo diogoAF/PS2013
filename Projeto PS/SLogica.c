@@ -8,19 +8,19 @@
 * ATENÇÃO! Isto é apenas um STUB!
 */
 int verificaLogin(TipoDesenvolvedor * usuario){
-    if(strcmp(usuario->email,"teste@teste.com") == 0){
+    if(strcmp(usuario->email,"desenv@teste.com") == 0){
         usuario->categoria = DESENVOLVEDOR_COMUM;
-        strcpy(usuario->nome,"Sr Usuario");
+        strcpy(usuario->nome,"Sr Desenvolvedor");
         return(LOGIN_REALIZADO);
     }
-    if(strcmp(usuario->email,"motoko@gits.com") == 0){
+    if(strcmp(usuario->email,"produto@teste.com") == 0){
         usuario->categoria = DESENVOLVEDOR_LIDER_PRODUTO;
-        strcpy(usuario->nome,"Motoko Kusanagi");
+        strcpy(usuario->nome,"Sr. Lider de Produto");
         return(LOGIN_REALIZADO);
     }
-    if(strcmp(usuario->email,"mitsuru@sees.org") == 0){
+    if(strcmp(usuario->email,"projeto@teste.com") == 0){
         usuario->categoria = DESENVOLVEDOR_LIDER_PROJETO;
-        strcpy(usuario->nome,"Mitsuru Kirijo");
+        strcpy(usuario->nome,"Sr Lider Projeto");
         return(LOGIN_REALIZADO);
     }else{
         return(LOGIN_USUARIO_NAO_CADASTRADO);
@@ -64,9 +64,9 @@ int efetuarPesquisaDesenvolvedor(TipoDesenvolvedor * desenvolvedor){
 
 int efetuarPesquisaProduto(TipoProduto * produto){
     if(strcmp(produto->codigo,"test") == 0){
-        strcpy(produto->nome,"TESTE");
-        strcpy(produto->versao,"01.02");
-        strcpy(produto->emailLider,"lider@teste.com");
+        strcpy(produto->nome,"Caso Positivo");
+        strcpy(produto->versao,"01.00");
+        strcpy(produto->emailLider,"produto@teste.com");
         return(PESQUISA_PRODUTO_ENCONTRADO);
     }else{
         return(PESQUISA_PRODUTO_NAO_ENCONTRADO);
