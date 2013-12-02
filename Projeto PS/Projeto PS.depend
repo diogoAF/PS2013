@@ -64,14 +64,16 @@
 1385993779 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\pacotedestructs.h
 	"TabelaDeCodigos.h"
 
-1385993968 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\tabeladecodigos.h
+1386005296 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\tabeladecodigos.h
 
 1385851092 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\uinterface.h
 	"PacoteDeStructs.h"
 
-1383236201 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\pdefeito.c
+1386005676 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\pdefeito.c
+	"SPDefeito.h"
 
-1383236215 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\pproduto.c
+1386005731 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\pproduto.c
+	"SPProduto.h"
 
 1385993779 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\slogica.c
 	<stdio.h>
@@ -119,14 +121,15 @@
 
 1385509186 source:c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\pdefeito.c
 
-1385499482 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\pdesenvolvedor.c
+1386005551 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\pdesenvolvedor.c
+	"SPDesenvolvedor.h"
+
+1386006356 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\spdesenvolvedor.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
-	"SPDesenvolvedor.h"
-
-1385560664 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\spdesenvolvedor.h
 	"PacoteDeStructs.h"
+	"PAuxiliar.h"
 
 1385509186 source:c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\pproduto.c
 
@@ -162,4 +165,27 @@
 	"UInterface.h"
 	"ValidacaoEntrada.h"
 	"SLogica.h"
+
+1385994627 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\pauxiliar.c
+	"PAuxiliar.h"
+
+1385994628 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\pauxiliar.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1386005699 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\spdefeito.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"PacoteDeStructs.h"
+	"PAuxiliar.h"
+
+1386006353 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\spproduto.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"PAuxiliar.h"
+	"TabelaDeCodigos.h"
+	"PacoteDeStructs.h"
 

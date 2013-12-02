@@ -95,7 +95,7 @@
     }
  }
 
- int deletarDefeito(FILE * arquivo, TipoDefeito * registro){
+ int deletarDefeito(FILE * arquivo, TipoDefeito * registro, long int posicao){
     //verifica o topo da pilha de espacos vazios
     char disponivel[TAMANHO_POSICAO + 1];
     fseek(arquivo, SEEK_SET, SEEK_SET);
@@ -103,18 +103,6 @@
     disponivel[ TAMANHO_POSICAO ] = NULL;
     fseek(arquivo, TAMANHO_POSICAO + 2, SEEK_SET);
     //+1: ignora o "\n" existente ao final da linha
-
-    //busca o registro no arquivo
-    char buffer[VET_CODIGO];//chave primaria
-    char lixo[TAM_TOTAL_REG_DEFEITO - VET_CODIGO];
-    long int posicao;
-    do{
-        posicao = ftell(arquivo);
-        fread(buffer, sizeof(char), VET_CODIGO - 1, arquivo);
-        buffer[VET_CODIGO - 1] = NULL;
-        fread(lixo, sizeof(char), TAM_TOTAL_REG_DEFEITO - VET_CODIGO-1, arquivo);
-        lixo[TAM_TOTAL_REG_DEFEITO - VET_CODIGO-1] = NULL;
-    }while( strcmp(buffer, registro->codigo) );
 
     fseek(arquivo, 0, SEEK_SET);
     fprintf(arquivo, "%0*x",TAMANHO_POSICAO, posicao);
@@ -147,10 +135,11 @@ int editarDefeito(FILE *arquivo, TipoDefeito *defeito, long int posicao){
     fwrite(defeito->codigo, sizeof(char), VET_CODIGO - 1, arquivo);
         fprintf(arquivo, " ");
 
+        ajustaString(defeito->codigoProduto, VET_CODIGO);
         fwrite(defeito->codigoProduto, sizeof(char), VET_CODIGO - 1, arquivo);
         fprintf(arquivo, " ");
 
-        fprintf(arquivo, "%d", defeito->estado);
+        fprintf(arquivo, "%0*d", DGTS_ESTADO, defeito->estado);
         fprintf(arquivo, " ");
 
         fprintf(arquivo, "%0*d", DGTS_VOTO, defeito->votos);
@@ -174,6 +163,7 @@ int editarDefeito(FILE *arquivo, TipoDefeito *defeito, long int posicao){
         fprintf(arquivo, "%0*d", DGTS_ANO, defeito->dataEncerramento.ano);
         fprintf(arquivo, " ");
 
+        ajustaString(defeito->descricao, VET_DESCRICAO);
         fwrite(defeito->descricao, sizeof(char), VET_DESCRICAO - 1, arquivo);
         fprintf(arquivo, "\n");
 }

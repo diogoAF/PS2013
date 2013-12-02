@@ -29,10 +29,11 @@ EXT int cadastrarUsuario(FILE *,TipoDesenvolvedor *);
  *
  * \param Ponteiro ao arquivo que armazena as informações dos usuários.
  * \param Estrutura de dados que armazena as informações do usuário em memória.//Pode ser trocada pelo email
+ * \param Long int com a posição do registro no arquivo.
  * \return Codigo de Sucesso/Erro
  *
  */
-EXT int deletarUsuario(FILE*, TipoDesenvolvedor*);
+EXT int deletarUsuario(FILE*, TipoDesenvolvedor*, long int);
 
 
 

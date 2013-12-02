@@ -31,7 +31,7 @@ EXT int inserirDefeito(FILE *, TipoDefeito *);
  * \return Codigo de Sucesso/Erro
  *
  */
-EXT int deletarDefeito(FILE * arquivo, TipoDefeito * registro);
+EXT int deletarDefeito(FILE * arquivo, TipoDefeito * registro, long int);
 
 /** \brief Busca um registro no arquivo
  *
