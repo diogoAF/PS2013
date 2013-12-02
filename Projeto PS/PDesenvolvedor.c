@@ -75,7 +75,7 @@
     fprintf(arquivo, "*%s", disponivel);
  }
 
-int existeUsuario(FILE *arquivo, char *chavePrimaria, long int *posicao){
+int existeUsuario(FILE *arquivo, char chavePrimaria[], long int *posicao){
     ajustaString(chavePrimaria, VET_EMAIL);
     char buffer[VET_EMAIL];
     char lixo[TAM_TOTAL - VET_EMAIL + 1];
@@ -112,19 +112,19 @@ int editarUsuario(FILE *arquivo, TipoDesenvolvedor *usuario, long int posicao){
     fprintf(arquivo, "%0*d\n", DGTS_CATEGORIA, usuario->categoria);
 }
 
-int editarUsuarioEmail(FILE *arquivo, char *email, long int posicao){
+int editarUsuarioEmail(FILE *arquivo, char email[], long int posicao){
     fseek(arquivo, posicao, SEEK_SET);
     ajustaString(email, VET_EMAIL);
     fwrite(email, sizeof(char), VET_EMAIL-1, arquivo);
 }
 
-int editarUsuarioNome(FILE *arquivo, char *nome, long int posicao){
+int editarUsuarioNome(FILE *arquivo, char nome[], long int posicao){
     fseek(arquivo, posicao + VET_EMAIL, SEEK_SET);
     ajustaString(nome, VET_NOME);
     fwrite(nome, sizeof(char), VET_NOME-1, arquivo);
 }
 
-int editarUsuarioSenha(FILE *arquivo, char *senha, long int posicao){
+int editarUsuarioSenha(FILE *arquivo, char senha[], long int posicao){
     fseek(arquivo, posicao + VET_EMAIL + VET_NOME, SEEK_SET);
     ajustaString(senha, VET_SENHA);
     fwrite(senha, sizeof(char), VET_SENHA-1, arquivo);

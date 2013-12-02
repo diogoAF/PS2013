@@ -69,7 +69,7 @@
     fprintf(arquivo, "*%s", disponivel);
  }
 
-int existeProduto(FILE *arquivo, char *chavePrimaria, long int *posicao){
+int existeProduto(FILE *arquivo, char chavePrimaria[], long int *posicao){
     ajustaString(chavePrimaria, VET_CODIGO);
     char buffer[VET_CODIGO];
     char lixo[TAM_TOTAL_REG_PRODUTO - VET_CODIGO + 1];
@@ -110,25 +110,25 @@ int editarProduto(FILE *arquivo, TipoProduto *produto, long int posicao){
         fprintf(arquivo, "\n");
 }
 
-int editarProdutoCodigo(FILE *arquivo, char *codigo, long int posicao){
+int editarProdutoCodigo(FILE *arquivo, char codigo[], long int posicao){
     fseek(arquivo, posicao, SEEK_SET);
     ajustaString(codigo, VET_CODIGO);
     fwrite(codigo, sizeof(char), VET_CODIGO-1, arquivo);
 }
 
-int editarProdutoNome(FILE *arquivo, char *nome, long int posicao){
+int editarProdutoNome(FILE *arquivo, char nome[], long int posicao){
     fseek(arquivo, posicao + VET_CODIGO, SEEK_SET);
     ajustaString(nome, VET_NOME);
     fwrite(nome, sizeof(char), VET_NOME-1, arquivo);
 }
 
-int editarProdutoVersao(FILE *arquivo, char *versao, long int posicao){
+int editarProdutoVersao(FILE *arquivo, char versao[], long int posicao){
     fseek(arquivo, posicao + VET_CODIGO + VET_NOME, SEEK_SET);
     ajustaString(versao, VET_VERSAO);
     fwrite(versao, sizeof(char), VET_VERSAO-1, arquivo);
 }
 
-int editarProdutoLider(FILE *arquivo, char *novoLider, long int posicao){
+int editarProdutoLider(FILE *arquivo, char novoLider[], long int posicao){
     fseek(arquivo, posicao + VET_CODIGO + VET_NOME + VET_VERSAO, SEEK_SET);
     ajustaString(novoLider, VET_EMAIL);
     fwrite(novoLider, sizeof(char), VET_EMAIL-1, arquivo);

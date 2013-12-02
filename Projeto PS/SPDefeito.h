@@ -31,7 +31,7 @@ EXT int inserirDefeito(FILE *, TipoDefeito *);
  * \return Codigo de Sucesso/Erro
  *
  */
-EXT int deletarDefeito(FILE * arquivo, TipoDefeito * registro, long int);
+EXT int deletarDefeito(FILE *, TipoDefeito *, long int);
 
 /** \brief Busca um registro no arquivo
  *
@@ -41,7 +41,7 @@ EXT int deletarDefeito(FILE * arquivo, TipoDefeito * registro, long int);
  * \return Código de Sucesso/Fracasso
  *
  */
-EXT int existeDefeito(FILE *arquivo, char *chavePrimaria, long int *posicao);
+EXT int existeDefeito(FILE *, char *, long int *);
 
 
 
@@ -53,7 +53,7 @@ EXT int existeDefeito(FILE *arquivo, char *chavePrimaria, long int *posicao);
  * \return Código de Sucesso/Erro
  *
  */
-EXT int editarDefeito(FILE *arquivo, TipoDefeito *defeito, long int posicao);
+EXT int editarDefeito(FILE *, TipoDefeito *, long int);
 
 
 /** \brief Edita campo código do registro de um defeito
@@ -64,7 +64,7 @@ EXT int editarDefeito(FILE *arquivo, TipoDefeito *defeito, long int posicao);
  * \return Código de Sucesso/Erro
  *
  */
-EXT int editarDefeitoCodigo(FILE *arquivo, char *codigo, long int posicao);
+EXT int editarDefeitoCodigo(FILE *, char *, long int);
 
 
 
@@ -75,7 +75,7 @@ EXT int editarDefeitoCodigo(FILE *arquivo, char *codigo, long int posicao);
  * \return Código de Sucesso/Erro
  *
  */
-EXT int editarDefeitoVoto(FILE *arquivo, long int posicao);
+EXT int editarDefeitoVoto(FILE *, long int);
 
 
 #endif // SPDEFEITO_H_INCLUDED

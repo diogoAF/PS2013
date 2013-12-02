@@ -111,7 +111,7 @@
     fprintf(arquivo, "*%s", disponivel);
  }
 
-int existeDefeito(FILE *arquivo, char *chavePrimaria, long int *posicao){
+int existeDefeito(FILE *arquivo, char chavePrimaria[], long int *posicao){
     ajustaString(chavePrimaria, VET_CODIGO);
     char buffer[VET_CODIGO];
     char lixo[TAM_TOTAL_REG_DEFEITO - VET_CODIGO + 1];
@@ -168,7 +168,7 @@ int editarDefeito(FILE *arquivo, TipoDefeito *defeito, long int posicao){
         fprintf(arquivo, "\n");
 }
 
-int editarDefeitoCodigo(FILE *arquivo, char *codigo, long int posicao){
+int editarDefeitoCodigo(FILE *arquivo, char codigo[], long int posicao){
     fseek(arquivo, posicao, SEEK_SET);
     ajustaString(codigo, VET_CODIGO);
     fwrite(codigo, sizeof(char), VET_CODIGO-1, arquivo);
