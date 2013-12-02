@@ -99,7 +99,7 @@ int efetuarVoluntariarDefeito(TipoDefeito * defeito){
     if(strcmp(defeito->codigo,"revy") == 0){
         return(DEFEITO_JA_ENCERRADO);
     }
-    if(strcmp(defeito->codigo,"sapo") == 0){
+    if(strcmp(defeito->codigo,"abcd") == 0){
         return(DEFEITO_JA_EM_REPARO);
     }
     if(strcmp(defeito->codigo,"jill") == 0){
