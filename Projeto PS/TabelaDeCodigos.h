@@ -101,6 +101,18 @@
 
 #define HEXA 16
 #define TAMANHO_POSICAO 10
+#define DECI 10
+#define TAM_TOTAL (VET_EMAIL-1 + VET_NOME-1 + VET_SENHA-1 + 3 + 1 + 1 + 1 )
+//+3: espaços separadores no registro //+1: nova linha //+1: o tamanho do categoria
+
+#define DGTS_VOTO 3
+#define DGTS_ESTADO 1
+#define DGTS_DIA 2
+#define DGTS_MES 2
+#define DGTS_ANO 4
+#define TAM_TOTAL_REG_DEFEITO (2*(VET_CODIGO-1) + VET_DESCRICAO-1 + DGTS_VOTO + 2*DGTS_DIA + 2*DGTS_MES + 2*DGTS_ANO + DGTS_ESTADO + 10 + 3  )
+//+10: numero de separadores; +1: nova linha
+
 
 /**
 * Constantes de tamanho de vetores

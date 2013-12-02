@@ -2,10 +2,17 @@
 #define SPDEFEITO_H_INCLUDED
 
 #ifdef SPDEFEITO_SERV
+#define EXT
+#else
 #define EXT extern
-#else EXT
 #endif
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "PacoteDeStructs.h"
+#include "PAuxiliar.h"
 
 /** \brief Função de cadastro de defeito
  *

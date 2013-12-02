@@ -1,11 +1,5 @@
 #define SPDEFEITO_SERV
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 #include "SPDefeito.h"
-#include "PacoteDeStructs.h"
 
  int inserirDefeito(FILE *arquivo, TipoDefeito *defeito){
 
@@ -127,18 +121,6 @@
     //a posição é salva em hexadecimal para aumentar o alcance do indice num numero menor de caracteres
     fseek(arquivo, posicao, SEEK_SET);
     fprintf(arquivo, "*%s", disponivel);
- }
-
- int ajustaString(char *buffer, int tamanho){
-    buffer[ tamanho - 1 ] = NULL;
-    int cont = strlen(buffer);
-    if(cont < tamanho){
-        int i;
-        for(i = 0; i < ( tamanho - cont - 1); i++){
-            buffer[cont + i] = ' ';
-        }
-    }
-
  }
 
 int existeDefeito(FILE *arquivo, char *chavePrimaria, long int *posicao){

@@ -61,10 +61,10 @@
 	"PacoteDeStructs.h"
 	"TabelaDeCodigos.h"
 
-1385851092 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\pacotedestructs.h
+1385993779 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\pacotedestructs.h
 	"TabelaDeCodigos.h"
 
-1385851092 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\tabeladecodigos.h
+1385993968 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\tabeladecodigos.h
 
 1385851092 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\uinterface.h
 	"PacoteDeStructs.h"
@@ -73,24 +73,24 @@
 
 1383236215 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\pproduto.c
 
-1385497372 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\slogica.c
+1385993779 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\slogica.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"SLogica.h"
 
-1385497372 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\slogica.h
+1385851092 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\slogica.h
 	"PacoteDeStructs.h"
 	"TabelaDeCodigos.h"
 
-1385497372 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\uinterface.c
+1385851092 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\uinterface.c
 	<stdio.h>
 	<stdlib.h>
 	"UInterface.h"
 	"ValidacaoEntrada.h"
 	"SLogica.h"
 
-1385000959 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\validacaoentrada.c
+1385851092 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\validacaoentrada.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

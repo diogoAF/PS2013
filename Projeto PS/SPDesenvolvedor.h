@@ -7,7 +7,11 @@
 #define EXT extern
 #endif
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "PacoteDeStructs.h"
+#include "PAuxiliar.h"
 
 
 /** \brief Funcao de cadastro de usuário
@@ -41,16 +45,6 @@ EXT int deletarUsuario(FILE*, TipoDesenvolvedor*);
  *
  */
 EXT int existeUsuario(FILE*, char*, long int*);
-
-
-/** \brief Função auxiliar ao cadastro responsável por preencher com " " as strings dos dados de cadastro.
- *
- * \param String a ser preenchida.
- * \param Tamanho preestabelecido da string.
- * \return Código de Sucesso/Erro
- *
- */
-EXT int ajustaString(char*, int);
 
 
 

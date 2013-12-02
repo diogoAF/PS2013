@@ -1,8 +1,4 @@
 #define SPDESENVOLVEDOR_SERV
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 #include "SPDesenvolvedor.h"
 
 #define TAMANHO_POSICAO 10 //esse é o tamanho da string que guarda a posicao do topo da pilha de reaproveitamento de espaco
@@ -13,18 +9,6 @@
 //os -1: cada macro foi feita pensando na extensao do vetor, que carrega um caractere NULL.
 //esse caractere deve ser ignorado ao contar quantos elementos um vetor tem efetivamente
  int cadastrarUsuario(FILE *arquivo, TipoDesenvolvedor *desenvolvedor){
-    /*
-        Se(Nao existe espaco vago){
-            cadastraNoFinalDoArquivo();
-        }else{
-            cadastraNoEspaçoVago();
-            atualizaPilhaDeEspacoVago();
-        }
-    */
-    /*
-        Bloco que verifica se há espaço vago
-    */
-
     /*ajusta as strings para ficarem com formato exato para serem escritas em arquivo*/
     ajustaString(desenvolvedor->email, VET_EMAIL);
     ajustaString(desenvolvedor->nome, VET_NOME);
@@ -101,18 +85,6 @@
     //a posição é salva em hexadecimal para aumentar o alcance do indice num numero menor de caracteres
     fseek(arquivo, posicao, SEEK_SET);
     fprintf(arquivo, "*%s", disponivel);
- }
-
- int ajustaString(char *buffer, int tamanho){
-    buffer[ tamanho - 1 ] = NULL;
-    int cont = strlen(buffer);
-    if(cont < tamanho){
-        int i;
-        for(i = 0; i < ( tamanho - cont - 1); i++){
-            buffer[cont + i] = ' ';
-        }
-    }
-
  }
 
 int existeUsuario(FILE *arquivo, char *chavePrimaria, long int *posicao){
