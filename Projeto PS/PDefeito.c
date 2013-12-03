@@ -132,11 +132,11 @@ int existeDefeito(FILE *arquivo, char chavePrimaria[], long int *posicao){
 
 int editarDefeito(FILE *arquivo, TipoDefeito *defeito, long int posicao){
     fseek(arquivo, posicao, SEEK_SET);
-    fwrite(defeito->codigo, sizeof(char), VET_CODIGO - 1, arquivo);
+    fwrite(defeito->codigo, sizeof(char), VET_CODIGO-1, arquivo);
         fprintf(arquivo, " ");
 
         ajustaString(defeito->codigoProduto, VET_CODIGO);
-        fwrite(defeito->codigoProduto, sizeof(char), VET_CODIGO - 1, arquivo);
+        fwrite(defeito->codigoProduto, sizeof(char), VET_CODIGO-1, arquivo);
         fprintf(arquivo, " ");
 
         fprintf(arquivo, "%0*d", DGTS_ESTADO, defeito->estado);

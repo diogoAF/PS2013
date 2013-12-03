@@ -24,16 +24,15 @@
     -Edicao
 */
 
-
 /** \fn int cadastrarUsuario(FILE *arquivo, TipoDesenvolvedor *usuario)
- * \brief Cadastra registro de usuario
+ * \brief Cadastra registro de usuario.
  *
- * \param arquivo que guarda os registros dos usuarios.
- * \param usuario estrutura de dados que armazena as informacoes do usuario em memoria.
+ * \param arquivo que armazena as informacoes dos usuarios.
+ * \param usuario estrutura de dados que armazena as informacoes do usuario em memoria.//Pode ser trocada pelo email
  * \return Codigo de Sucesso/Erro
  *
  */
-EXT int cadastrarUsuario(FILE *,TipoDesenvolvedor *);
+EXT int cadastrarUsuario(FILE*, TipoDesenvolvedor*);
 
 
 /** \fn int deletarUsuario(FILE *arquivo, TipoDesenvolvedor *usuario, long int posicao)

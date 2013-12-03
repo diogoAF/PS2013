@@ -6,8 +6,6 @@ C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/P
 C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/PacoteDeStructs.h:98: warning: missing argument after \class.
 C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/PacoteDeStructs.h:113: warning: missing argument after \class.
 C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/PacoteDeStructs.h:6: warning: the name `TabelaDeStructs.h' supplied as the second argument in the \file statement is not an input file
-C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/PAuxiliar.h:21: warning: argument 'String' of command @param is not found in the argument list of ajustaString(char *, int)
-C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/PAuxiliar.h:21: warning: argument 'Tamanho' of command @param is not found in the argument list of ajustaString(char *, int)
 C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/SLogica.h:27: warning: argument 'TipoDesenvolvedor' of command @param is not found in the argument list of efetuaCadastroDesenvolvedor(TipoDesenvolvedor *)
 C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/SLogica.h:106: warning: argument 'char' of command @param is not found in the argument list of efetuarAlocarDesenvolvedorDefeito(char *, char *)
 C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/SLogica.h:106: warning: argument 'char' of command @param is not found in the argument list of efetuarAlocarDesenvolvedorDefeito(char *, char *)
@@ -38,11 +36,11 @@ C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/S
 C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/SPDefeito.h:50: warning: argument 'chave' of command @param is not found in the argument list of existeDefeito(FILE *arquivo, char *codigo, long int *posicao)
 C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/SPDefeito.h:50: warning: The following parameters of existeDefeito(FILE *arquivo, char *codigo, long int *posicao) are not documented:
   parameter 'codigo'
-C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/SPProduto.h:63: warning: argument 'estrutura' of command @param is not found in the argument list of editarProduto(FILE *arquivo, TipoProduto *produto, long int posicao)
-C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/SPProduto.h:63: warning: The following parameters of editarProduto(FILE *arquivo, TipoProduto *produto, long int posicao) are not documented:
+C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/SPProduto.h:62: warning: argument 'estrutura' of command @param is not found in the argument list of editarProduto(FILE *arquivo, TipoProduto *produto, long int posicao)
+C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/SPProduto.h:62: warning: The following parameters of editarProduto(FILE *arquivo, TipoProduto *produto, long int posicao) are not documented:
   parameter 'produto'
-C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/SPProduto.h:51: warning: argument 'endereco' of command @param is not found in the argument list of existeProduto(FILE *arquivo, char *codigo, long int *posicao)
-C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/SPProduto.h:51: warning: The following parameters of existeProduto(FILE *arquivo, char *codigo, long int *posicao) are not documented:
+C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/SPProduto.h:50: warning: argument 'endereco' of command @param is not found in the argument list of existeProduto(FILE *arquivo, char *codigo, long int *posicao)
+C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/SPProduto.h:50: warning: The following parameters of existeProduto(FILE *arquivo, char *codigo, long int *posicao) are not documented:
   parameter 'posicao'
 C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/UInterface.h:383: warning: argument 'void' of command @param is not found in the argument list of alocarDesenvolvedorDefeito(void)
 C:/Users/Mashiro/Documents/Programação Sistemática/Projeto/trunk/Projeto PS/UInterface.h:81: warning: argument 'desenvolvedor' of command @param is not found in the argument list of cadastraDesenvolvedor(TipoDesenvolvedor *)

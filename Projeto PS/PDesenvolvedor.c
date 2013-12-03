@@ -8,6 +8,7 @@
 //+1: creio que esse seja o caractere de retorno de carro
 //os -1: cada macro foi feita pensando na extensao do vetor, que carrega um caractere NULL.
 //esse caractere deve ser ignorado ao contar quantos elementos um vetor tem efetivamente
+
  int cadastrarUsuario(FILE *arquivo, TipoDesenvolvedor *desenvolvedor){
     /*ajusta as strings para ficarem com formato exato para serem escritas em arquivo*/
     ajustaString(desenvolvedor->email, VET_EMAIL);

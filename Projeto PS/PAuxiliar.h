@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "TabelaDeCodigos.h"
 
 /*! \file PAuxiliar.h
     \brief Servicos auxiliares aos modulos de persistencia
@@ -17,15 +18,14 @@
     como ajuste de string.
 */
 
-
-/** \brief Função auxiliar ao cadastro responsável por preencher com " " as strings dos dados de cadastro.
+/** \fn int ajustaString(char *buffer, int tamanho)
+ * \brief Funcao auxiliar ao cadastro responsável por preencher com " " as strings dos dados de cadastro.
  *
- * \param String a ser preenchida.
- * \param Tamanho preestabelecido da string.
- * \return Código de Sucesso/Erro
+ * \param buffer String a ser preenchida com " ".
+ * \param tamanho Tamanho preestabelecido da string.
+ * \return Codigo de Sucesso/Erro
  *
  */
 EXT int ajustaString(char*, int);
-
 
 #endif // PAUXILIAR_H_INCLUDED

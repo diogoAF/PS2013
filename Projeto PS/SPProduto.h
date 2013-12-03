@@ -25,7 +25,6 @@
     -Edicao
 */
 
-
 /** \fn int inserirProduto(FILE *arquivo, TipoProduto *produto)
  * \brief Funcao de cadastro de produto
  *
