@@ -12,3 +12,7 @@ int ajustaString(char *buffer, int tamanho){
         }
     }
  }
+
+int inicializaArquivo(FILE *arquivo){
+    fprintf(arquivo, "%0*d", TAMANHO_POSICAO, 0);
+}
