@@ -1,3 +1,11 @@
+/*! \file UInterface.h
+    \brief Módulo responsável por realizar a interface entre o usuario e as funcionalidades do sistema, daí o seu nome.
+    Tal interface eh realizada perguntando ao usuario o que deseja fazer e coletando os dados necessarios para a realizacao
+    das tarefas solicitadas pelo usuario, sempre validando os dados inseridos.
+    O modulo eh cliente da logica de negocio, informando ao usuario sobre o resultado de suas solicitacoes,
+    sendo elas notificacoes de sucesso ou de erro. A interface optada pelo grupo foi no modo textual.
+*/
+
 #ifndef UINTERFACE_H_INCLUDED
 #define UINTERFACE_H_INCLUDED
 #ifdef UINTERFACE_SERV

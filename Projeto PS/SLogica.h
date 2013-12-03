@@ -1,3 +1,9 @@
+/*! \file SLogica.h
+    \brief Modulo responsavel por garantir que as regras pre-definidas nos requisitos do trabalho sejam sempre cumpridas.
+    Sempre garantindo a integridade das chaves e das referencias entre registos. O modulo eh servidor da interface com os
+    usuarios e ao menos tempo cliente da camada de persistencia.
+*/
+
 #ifndef SLOGICA_H_INCLUDED
 #define SLOGICA_H_INCLUDED
 #ifdef SLOGICA_SERV

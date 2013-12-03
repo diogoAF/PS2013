@@ -1,3 +1,7 @@
+/*! \file ValidacaoEntrada.h
+    \brief Modulo responsavel por ofertar funcoes que possam validar os dados fornecidos pelo usuario.
+*/
+
 #ifndef VALIDACAOENTRADA_H_INCLUDED
 #define VALIDACAOENTRADA_H_INCLUDED
 #ifdef VALIDACAOENTRADA_SERV

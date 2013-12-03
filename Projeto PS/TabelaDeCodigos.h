@@ -1,3 +1,8 @@
+/*! \file TabelaDeCodigos.h
+    \brief Modulo responsavel por armazenar todas as MACROS do sistema.
+*/
+
+
 #ifndef TABELADECODIGOS_H_INCLUDED
 #define TABELADECODIGOS_H_INCLUDED
 
