@@ -13,96 +13,108 @@
 #include "PacoteDeStructs.h"
 #include "PAuxiliar.h"
 
+/*! \file SPDesenvolvedor.h
+    \brief Servicos de Persistencia de Desenvolvedores
 
-/** \brief Funcao de cadastro de usuário
+    As funcoes do presente arquivo dizem respeito as operacoes referentes ao armazenamento
+    de registros desenvolvedores em arquivo e suas operacoes basicas:
+    -Insercao
+    -Eliminacao
+    -Busca
+    -Edicao
+*/
+
+
+/** \fn int cadastrarUsuario(FILE *arquivo, TipoDesenvolvedor *usuario)
+ * \brief Cadastra registro de usuario
  *
- * \param Ponteiro ao arquivo que guarda os registros dos usuários.
- * \param Estrutura de dados que armazena as informações do usuário em memória.
+ * \param arquivo que guarda os registros dos usuarios.
+ * \param usuario estrutura de dados que armazena as informacoes do usuario em memoria.
  * \return Codigo de Sucesso/Erro
  *
  */
 EXT int cadastrarUsuario(FILE *,TipoDesenvolvedor *);
 
 
-
-/** \brief Função responsável por deletar um registro de usuário.
+/** \fn int deletarUsuario(FILE *arquivo, TipoDesenvolvedor *usuario, long int posicao)
+ * \brief Deleta registro de usuario.
  *
- * \param Ponteiro ao arquivo que armazena as informações dos usuários.
- * \param Estrutura de dados que armazena as informações do usuário em memória.//Pode ser trocada pelo email
- * \param Long int com a posição do registro no arquivo.
+ * \param arquivo que armazena as informacoes dos usuarios.
+ * \param usuario estrutura de dados que armazena as informacoes do usuario em memoria.//Pode ser trocada pelo email
+ * \param posicao do registro no arquivo.
  * \return Codigo de Sucesso/Erro
  *
  */
 EXT int deletarUsuario(FILE*, TipoDesenvolvedor*, long int);
 
 
-
-/** \brief Busca um registro no arquivo
+/** \fn int existeUsuario(FILE *arquivo, char *email, long int *posicao)
+ * \brief Busca um registro no arquivo
  *
- * \param Ponteiro ao arquivo que armazena as informações dos usuários.
- * \param String da chave primária de busca no arquivo
- * \param Endereço a um long int que poderá receber a posição do registro no arquivo, caso encontrado
- * \return Código de Sucesso/Fracasso
+ * \param arquivo que armazena as informacoes dos usuarios.
+ * \param email chave primaria de busca no arquivo
+ * \param posicao endereco a um long int que podera receber a posicao do registro no arquivo, caso encontrado
+ * \return Codigo de Sucesso/Fracasso
  *
  */
 EXT int existeUsuario(FILE*, char*, long int*);
 
 
-
-/** \brief Edita todos os campos do registro de um usuario
+/** \fn int editarUsuario(FILE *arquivo, TipoDesenvolvedor *usuario, long int posicao)
+ * \brief Edita todos os campos do registro de um usuario
  *
- * \param Ponteiro ao arquivo que armazena as informações dos usuários.
- * \param Estrutura de dados que armazena as informações do usuário em memória.
- * \param Long int com a posição do registro no arquivo
- * \return Código de Sucesso/Erro
+ * \param arquivo que armazena as informacoes dos usuarios.
+ * \param usuario estrutura de dados que armazena as informacoes do usuario em memoria.
+ * \param posicao do registro no arquivo
+ * \return Codigo de Sucesso/Erro
  *
  */
 EXT int editarUsuario(FILE*, TipoDesenvolvedor*, long int);
 
 
-
-/** \brief Edita campo email do registro de um usuario
+/** \fn int editarUsuarioEmail(FILE *arquivo, char *email, long int posicao)
+ * \brief Edita campo email do registro de um usuario
  *
- * \param Ponteiro ao arquivo que armazena as informações dos usuários.
- * \param String que armazena o novo email
- * \param Long int com a posição do registro no arquivo
- * \return Código de Sucesso/Erro
+ * \param arquivo que armazena as informacoes dos usuarios.
+ * \param email novo
+ * \param posicao do registro no arquivo
+ * \return Codigo de Sucesso/Erro
  *
  */
 EXT int editarUsuarioEmail(FILE*, char *, long int);
 
 
-
+/** \fn editarUsuarioNome(FILE *arquivo, char *nome, long int posicao)
 /** \brief Edita campo nome do registro de um usuario
  *
- * \param Ponteiro ao arquivo que armazena as informações dos usuários.
- * \param String que armazena o novo nome
- * \param Long int com a posição do registro no arquivo
- * \return Código de Sucesso/Erro
+ * \param arquivo que armazena as informacoes dos usuarios.
+ * \param nome novo
+ * \param posicao do registro no arquivo
+ * \return Codigo de Sucesso/Erro
  *
  */
  EXT int editarUsuarioNome(FILE*, char*, long int);
 
 
-
+/** \fn int editarUsuarioSenha(FILE *arquivo, char *senha, long int posicao)
 /** \brief Edita campo senha do registro de um usuario
  *
- * \param Ponteiro ao arquivo que armazena as informações dos usuários.
- * \param String que armazena o nova senha
- * \param Long int com a posição do registro no arquivo
- * \return Código de Sucesso/Erro
+ * \param arquivo que armazena as informacoes dos usuarios.
+ * \param senha nova
+ * \param posicao do registro no arquivo
+ * \return Codigo de Sucesso/Erro
  *
  */
  EXT int editarUsuarioSenha(FILE*, char*, long int);
 
 
-
-/** \brief Edita campo categoria do registro de um usuario
+/** \fn int editarUsuarioCategoria(FILE *arquivo, int categoria, long int posicao)
+ * \brief Edita campo categoria do registro de um usuario
  *
- * \param Ponteiro ao arquivo que armazena as informações dos usuários.
- * \param int que armazena o nova categoria
- * \param Long int com a posição do registro no arquivo
- * \return Código de Sucesso/Erro
+ * \param arquivo que armazena as informacoes dos usuarios.
+ * \param categoria nova
+ * \param posicao do registro no arquivo
+ * \return Codigo de Sucesso/Erro
  *
  */
  EXT int editarUsuarioCategoria(FILE*, int, long int);

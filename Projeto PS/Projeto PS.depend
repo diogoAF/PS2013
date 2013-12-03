@@ -69,13 +69,13 @@
 1385851092 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\uinterface.h
 	"PacoteDeStructs.h"
 
-1386005676 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\pdefeito.c
+1386008955 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\pdefeito.c
 	"SPDefeito.h"
 
-1386005731 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\pproduto.c
+1386009012 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\pproduto.c
 	"SPProduto.h"
 
-1385993779 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\slogica.c
+1386006450 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\slogica.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -121,7 +121,7 @@
 
 1385509186 source:c:\users\elemental\documents\trab\ps_2\trunk\projeto ps\pdefeito.c
 
-1386005551 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\pdesenvolvedor.c
+1386008950 source:c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\pdesenvolvedor.c
 	"SPDesenvolvedor.h"
 
 1386006356 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\spdesenvolvedor.h
@@ -174,7 +174,7 @@
 	<string.h>
 	<stdlib.h>
 
-1386005699 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\spdefeito.h
+1386008953 c:\users\mashiro\documents\programação sistemática\projeto\trunk\projeto ps\spdefeito.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

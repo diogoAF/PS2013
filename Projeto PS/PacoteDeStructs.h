@@ -3,16 +3,42 @@
 
 #include "TabelaDeCodigos.h"
 
-/**
-Struct para armazenar a DATA
+/*! \file TabelaDeStructs.h
+    \brief Contem as definicoes das structs utilizadas
+
+    As diferentes structs utilizadas no programa servem para armazenar
+    -Data
+    -Desenvolvedores
+    -Defeitos
+    -Produtos
+    -Lista de Desenvolvedores
+    -Lista de Defeitos
+    -Lista de produtos
 */
+
+/** \struct
+ *  \brief
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */
 typedef struct{
-    int dia,mes,ano;
+    int dia,
+        mes,
+        ano;
 }TipoData;
 
-/**
-Struct para armazenar o DESENVOLVEDOR
-*/
+
+/** \struct
+ *  \brief
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */
 typedef struct{
     char nome[VET_NOME],
     senha[VET_SENHA],
@@ -20,9 +46,15 @@ typedef struct{
     int categoria,defeito1,defeito2;
 }TipoDesenvolvedor;
 
-/**
-Struct para armazenar o PRODUTO
-*/
+
+/** \struct
+ *  \brief
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */
 typedef struct{
     char nome[VET_NOME],
     codigo[VET_CODIGO],
@@ -30,9 +62,15 @@ typedef struct{
     emailLider[VET_EMAIL];
 }TipoProduto;
 
-/**
-Struct para armazenar o DEFEITO
-*/
+
+/** \struct
+ *  \brief
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */
 typedef struct{
     char codigo[VET_CODIGO],
     descricao[VET_DESCRICAO],
@@ -40,17 +78,50 @@ typedef struct{
     int estado, votos;
     TipoData dataAbertura, dataEncerramento;
 }TipoDefeito;
-/*
-Estou estudando um meio de utilizar a classe "list" no lugar da estrutura de ponteiros.
-*/
+
+
+/** \struct
+ *  \brief
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */
 typedef struct listaDesenvolvedor{
     TipoDesenvolvedor *desenvolvedor;
     struct listaDesenvolvedor *proximo;
     struct listaDesenvolvedor *anterior;
 }ListDesenvolvedor;
 
-//typedef struct
 
-//typedef struct
+/** \struct
+ *  \brief
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */
+typedef struct listaDefeito{
+    TipoProduto *produto;
+    struct listaDesenvolvedor *proximo;
+    struct listaDesenvolvedor *anterior;
+}ListProduto;
+
+
+/** \struct
+ *  \brief
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */
+typedef struct listaDefeito{
+    TipoDefeito *defeito;
+    struct listaDesenvolvedor *proximo;
+    struct listaDesenvolvedor *anterior;
+}ListDefeito;
 
 #endif // PACOTEDESTRUCTS_H_INCLUDED

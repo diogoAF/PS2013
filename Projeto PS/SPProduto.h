@@ -14,90 +14,102 @@
 #include "TabelaDeCodigos.h"
 #include "PacoteDeStructs.h"
 
+/*! \file SPProduto.h
+    \brief Servicos de Persistencia de Produtos
 
-/** \brief Funcao de cadastro de produto
+    As funcoes do presente arquivo dizem respeito as operacoes referentes ao armazenamento
+    de registros produtos em arquivo e suas operacoes basicas:
+    -Insercao
+    -Eliminacao
+    -Busca
+    -Edicao
+*/
+
+
+/** \fn int inserirProduto(FILE *arquivo, TipoProduto *produto)
+ * \brief Funcao de cadastro de produto
  *
- * \param Ponteiro ao arquivo que guarda os registros dos produtos.
- * \param Estrutura de dados que armazena as informações do produto em memória.
+ * \param arquivo que guarda os registros dos produtos.
+ * \param produto estrutura de dados que armazena as informacoes do produto em memoria.
  * \return Codigo de Sucesso/Erro
  *
  */
 EXT int inserirProduto(FILE *, TipoProduto *);
 
-
-/** \brief Função responsável por deletar um registro de produto.
+/** \fn int deletarProduto(FILE *arquivo, TipoProduto *produto, long int posicao)
+ * \brief Deletar um registro de produto.
  *
- * \param Ponteiro ao arquivo que armazena as informações dos produtos.
- * \param Estrutura de dados que armazena as informações do produto em memória.//Pode ser trocada pelo email
- * \param Long int com a posição do registro no arquivo.
+ * \param arquivo que armazena as informacoes dos produtos.
+ * \param produto estrutura de dados que armazena as informacoes do produto em memoria.//Pode ser trocada pelo email
+ * \param posicao do registro no arquivo.
  * \return Codigo de Sucesso/Erro
  *
  */
 EXT int deletarProduto(FILE *, TipoProduto *, long int);
 
-
-/** \brief Busca um registro no arquivo
+/** \fn int existeProduto(FILE *arquivo, char *codigo, long int *posicao)
+ * \brief Busca um registro no arquivo
  *
- * \param Ponteiro ao arquivo que armazena as informações dos produtos.
- * \param String da chave primária de busca no arquivo
- * \param Endereço a um long int que poderá receber a posição do registro no arquivo, caso encontrado
- * \return Código de Sucesso/Fracasso
+ * \param arquivo que armazena as informacoes dos produtos.
+ * \param codigo chave primaria de busca no arquivo
+ * \param endereco a um long int que podera receber a posicao do registro no arquivo, caso encontrado
+ * \return Codigo de Sucesso/Fracasso
  *
  */
 EXT int existeProduto(FILE *, char *, long int *);
 
 
-
-/** \brief Edita todos os campos do registro de um produto
+/** \fn int editarProduto(FILE *arquivo, TipoProduto *produto, long int posicao)
+ * \brief Edita todos os campos do registro de um produto
  *
- * \param Ponteiro ao arquivo que armazena as informações dos produtos.
- * \param Estrutura de dados que armazena as informações do produto em memória.
- * \param Long int com a posição do registro no arquivo
- * \return Código de Sucesso/Erro
+ * \param arquivo que armazena as informacoes dos produtos.
+ * \param estrutura de dados que armazena as informacoes do produto em memoria.
+ * \param posicao do registro no arquivo
+ * \return Codigo de Sucesso/Erro
  *
  */
 EXT int editarProduto(FILE *, TipoProduto *, long int);
 
-
-/** \brief Edita campo código do registro de um produto
+/** \fn int editarProdutoCodigo(FILE *arquivo, char *codigo, long int posicao)
+ * \brief Edita campo codigo do registro de um produto
  *
- * \param Ponteiro ao arquivo que armazena as informações dos produtos.
- * \param String que armazena o novo código
- * \param Long int com a posição do registro no arquivo
- * \return Código de Sucesso/Erro
+ * \param arquivo que armazena as informacoes dos produtos.
+ * \param codigo novo
+ * \param posicao do registro no arquivo
+ * \return Codigo de Sucesso/Erro
  *
  */
 EXT int editarProdutoCodigo(FILE *, char *, long int);
 
-
-/** \brief Edita campo código do registro de um produto
+/** \fn int editarProdutoNome(FILE *arquivo, char *nome, long int posicao)
+ * \brief Edita campo codigo do registro de um produto
  *
- * \param Ponteiro ao arquivo que armazena as informações dos produtos.
- * \param String que armazena o novo nome
- * \param Long int com a posição do registro no arquivo
- * \return Código de Sucesso/Erro
+ * \param arquivo que armazena as informacoes dos produtos.
+ * \param nome novo
+ * \param posicao do registro no arquivo
+ * \return Codigo de Sucesso/Erro
  *
  */
 EXT int editarProdutoNome(FILE *, char *, long int);
 
-
-/** \brief Edita campo código do registro de um produto
+/** \fn int editarProdutoVersao(FILE *arquivo , char *versao, long int posicao)
+ * \brief Edita campo codigo do registro de um produto
  *
- * \param Ponteiro ao arquivo que armazena as informações dos produtos.
- * \param String que armazena o nova versão
- * \param Long int com a posição do registro no arquivo
- * \return Código de Sucesso/Erro
+ * \param arquivo que armazena as informacoes dos produtos.
+ * \param versao nova
+ * \param posicao do registro no arquivo
+ * \return Codigo de Sucesso/Erro
  *
  */
 EXT int editarProdutoVersao(FILE *, char *, long int);
 
-
-/** \brief Edita campo código do registro de um produto
+/** \fn int editarProdutoLider(FILE *arquivo, char *email, long int posicao)
+ * \brief Edita campo codigo do registro de um produto
  *
- * \param Ponteiro ao arquivo que armazena as informações dos produtos.
- * \param String que armazena o email do novo líder.
- * \param Long int com a posição do registro no arquivo.
- * \return Código de Sucesso/Erro
+ * \param arquivo que armazena as informacoes dos produtos.
+ * \param email do novo lider
+ * \param posicao do registro no arquivo.
+ * \return Codigo de Sucesso/Erro
  *
  */
 EXT int editarProdutoLider(FILE *, char *, long int);
