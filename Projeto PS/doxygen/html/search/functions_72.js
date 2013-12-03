@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['realizaalocardesenvolvedordefeito',['realizaAlocarDesenvolvedorDefeito',['../_u_interface_8h.html#a394fda9efb6071eff31d98071b37d187',1,'UInterface.c']]],
+  ['realizaalocarliderproduto',['realizaAlocarLiderProduto',['../_u_interface_8h.html#a17f059f4d0b5e80a881a27579eadcd4e',1,'UInterface.c']]],
+  ['realizaalteracaocadastro',['realizaAlteracaoCadastro',['../_u_interface_8h.html#adefb281ca397f7fb5734657e5b6da302',1,'UInterface.c']]],
+  ['realizacadastrardefeito',['realizaCadastrarDefeito',['../_u_interface_8h.html#a64e76431f060c9c9753a65f84157e324',1,'UInterface.c']]],
+  ['realizacadastrarproduto',['realizaCadastrarProduto',['../_u_interface_8h.html#adc1db0d503f74efd22d87e9f610b1c9d',1,'UInterface.c']]],
+  ['realizalogin',['realizaLogin',['../_u_interface_8h.html#aaa43a97d0297e5189b52c7c9fa2f8d8a',1,'UInterface.c']]],
+  ['realizapesquisadefeito',['realizaPesquisaDefeito',['../_u_interface_8h.html#a0d2fa2d70e704fd30af45b11b103e441',1,'UInterface.c']]],
+  ['realizapesquisadesenvolvedor',['realizaPesquisaDesenvolvedor',['../_u_interface_8h.html#a69267b1a7b23ae505b098993d92a9059',1,'UInterface.c']]],
+  ['realizapesquisaproduto',['realizaPesquisaProduto',['../_u_interface_8h.html#a9ca3d8e6393856001f7634a073643810',1,'UInterface.c']]],
+  ['realizarcancelarconta',['realizarCancelarConta',['../_u_interface_8h.html#a210686fc4dee991b629161d6cc0d54dc',1,'UInterface.c']]],
+  ['realizarcancelarcontaliderprojeto',['realizarCancelarContaLiderProjeto',['../_u_interface_8h.html#ac04171b2de968c0d4e2719d58288417b',1,'UInterface.c']]],
+  ['realizaremoverdesenvolvedordefeito',['realizaRemoverDesenvolvedorDefeito',['../_u_interface_8h.html#a038510eef60d86ee416d3b07ee5ecc5c',1,'UInterface.c']]],
+  ['realizaremoverliderproduto',['realizaRemoverLiderProduto',['../_u_interface_8h.html#aa428ad9307cbeb84df5fc4c4eb36fc98',1,'UInterface.c']]],
+  ['realizaremoverproduto',['realizaRemoverProduto',['../_u_interface_8h.html#a619a07227c729d2c684d4ab89294ae11',1,'UInterface.c']]],
+  ['realizavoluntariardefeito',['realizaVoluntariarDefeito',['../_u_interface_8h.html#af4994a6383c5a445fbfafa51ce7e029b',1,'UInterface.c']]],
+  ['realizavotardefeito',['realizaVotarDefeito',['../_u_interface_8h.html#a44fb8254b2a34621d1e926a5282aa6d2',1,'UInterface.c']]],
+  ['removerdesenvolvedordefeito',['removerDesenvolvedorDefeito',['../_u_interface_8h.html#ae2afeb74fbf80312b52e6e16fe0fe51c',1,'UInterface.c']]]
+];
